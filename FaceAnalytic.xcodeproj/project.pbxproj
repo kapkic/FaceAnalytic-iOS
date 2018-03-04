@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89198A53204C9D93003389A5 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89198A52204C9D93003389A5 /* Media.swift */; };
 		89737C23204B4410000E2364 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89737C22204B4410000E2364 /* AppDelegate.swift */; };
 		89737C25204B4410000E2364 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89737C24204B4410000E2364 /* ViewController.swift */; };
 		89737C28204B4410000E2364 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89737C26204B4410000E2364 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		89198A52204C9D93003389A5 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		89737C1F204B4410000E2364 /* FaceAnalytic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceAnalytic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89737C22204B4410000E2364 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89737C24204B4410000E2364 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,7 +43,6 @@
 			isa = PBXGroup;
 			children = (
 				89737C21204B4410000E2364 /* FaceAnalytic */,
-				89737C20204B4410000E2364 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,13 +52,16 @@
 				89737C1F204B4410000E2364 /* FaceAnalytic.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		89737C21204B4410000E2364 /* FaceAnalytic */ = {
 			isa = PBXGroup;
 			children = (
+				89737C20204B4410000E2364 /* Products */,
 				89737C22204B4410000E2364 /* AppDelegate.swift */,
 				89737C24204B4410000E2364 /* ViewController.swift */,
+				89198A52204C9D93003389A5 /* Media.swift */,
 				89737C26204B4410000E2364 /* Main.storyboard */,
 				89737C29204B4410000E2364 /* Assets.xcassets */,
 				89737C2B204B4410000E2364 /* LaunchScreen.storyboard */,
@@ -150,6 +154,7 @@
 			files = (
 				89737C25204B4410000E2364 /* ViewController.swift in Sources */,
 				89737C23204B4410000E2364 /* AppDelegate.swift in Sources */,
+				89198A53204C9D93003389A5 /* Media.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
