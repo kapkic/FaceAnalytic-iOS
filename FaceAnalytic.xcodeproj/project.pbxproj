@@ -12,6 +12,7 @@
 		89737C28204B4410000E2364 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89737C26204B4410000E2364 /* Main.storyboard */; };
 		89737C2A204B4410000E2364 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89737C29204B4410000E2364 /* Assets.xcassets */; };
 		89737C2D204B4410000E2364 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89737C2B204B4410000E2364 /* LaunchScreen.storyboard */; };
+		89737C35204B505D000E2364 /* testimg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89737C34204B505D000E2364 /* testimg.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		89737C29204B4410000E2364 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89737C2C204B4410000E2364 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89737C2E204B4410000E2364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89737C34204B505D000E2364 /* testimg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testimg.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +62,17 @@
 				89737C29204B4410000E2364 /* Assets.xcassets */,
 				89737C2B204B4410000E2364 /* LaunchScreen.storyboard */,
 				89737C2E204B4410000E2364 /* Info.plist */,
+				89737C36204B5061000E2364 /* Res */,
 			);
 			path = FaceAnalytic;
+			sourceTree = "<group>";
+		};
+		89737C36204B5061000E2364 /* Res */ = {
+			isa = PBXGroup;
+			children = (
+				89737C34204B505D000E2364 /* testimg.jpg */,
+			);
+			path = Res;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +137,7 @@
 				89737C2D204B4410000E2364 /* LaunchScreen.storyboard in Resources */,
 				89737C2A204B4410000E2364 /* Assets.xcassets in Resources */,
 				89737C28204B4410000E2364 /* Main.storyboard in Resources */,
+				89737C35204B505D000E2364 /* testimg.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

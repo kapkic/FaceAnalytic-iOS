@@ -1,24 +1,155 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7M3-mw-Fv3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="gHe-UQ-00m">
+            <objects>
+                <navigationController id="7M3-mw-Fv3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ICi-Au-ElB">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="r4J-oP-jjQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ddX-yF-g7v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-889" y="108"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FaceAnalytic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="testimg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rWe-6h-PAt">
+                                <rect key="frame" x="14" y="71" width="343" height="211"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="680-pT-SIm">
+                                <rect key="frame" x="94" y="290" width="182" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Fotoğraf Çek"/>
+                                <connections>
+                                    <action selector="PhotoPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ynk-l8-2xb"/>
+                                    <segue destination="Gx2-kF-Bpb" kind="show" id="62L-qK-YGe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnf-oB-16b">
+                                <rect key="frame" x="90" y="407" width="191" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Kişilik Analizini Başlat"/>
+                                <connections>
+                                    <action selector="StartAnalysis:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T35-oA-vEz"/>
+                                    <segue destination="UAM-TX-iD0" kind="show" id="0CY-9b-psr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHJ-Iz-RTn">
+                                <rect key="frame" x="53" y="369" width="142" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Kullanım Şartları'nı"/>
+                                <connections>
+                                    <segue destination="7AG-oK-qSa" kind="show" id="xl2-Sf-7Jw"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="T" borderStyle="roundedRect" placeholder="E-Posta adresi" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wdy-yS-6j8">
+                                <rect key="frame" x="85" y="328" width="201" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                                <connections>
+                                    <action selector="MailEntered:" destination="BYZ-38-t0r" eventType="valueChanged" id="Sa1-aj-FKw"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="okudum ve kabul ediyorum." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ov8-iv-iUG">
+                                <rect key="frame" x="188" y="374" width="181" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z9E-8X-ZaH">
+                                <rect key="frame" x="5" y="369" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="Switch:" destination="BYZ-38-t0r" eventType="valueChanged" id="e5R-2N-p41"/>
+                                </connections>
+                            </switch>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="q0o-UX-13r"/>
+                    <connections>
+                        <outlet property="btnPhoto" destination="680-pT-SIm" id="E0O-wO-HlL"/>
+                        <outlet property="btnSend" destination="vnf-oB-16b" id="lZO-sa-JAx"/>
+                        <outlet property="txtMail" destination="Wdy-yS-6j8" id="PHy-Vh-2Ft"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="134" y="87"/>
+        </scene>
+        <!--Foto-->
+        <scene sceneID="KKt-Cc-Rm9">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sVN-bQ-aug" sceneMemberID="firstResponder"/>
+                <viewController title="Foto" id="Gx2-kF-Bpb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gRi-GZ-AdW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Qiu-E2-6it"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="849" y="-376"/>
+        </scene>
+        <!--Sözleşme-->
+        <scene sceneID="EDk-oO-PnC">
+            <objects>
+                <viewController title="Sözleşme" id="7AG-oK-qSa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rKe-nC-w9v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="3xB-vt-W3Y"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vp1-so-VTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849" y="349"/>
+        </scene>
+        <!--Analiz-->
+        <scene sceneID="ZAU-zq-wpu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hCg-kS-1jW" sceneMemberID="firstResponder"/>
+                <viewController title="Analiz" id="UAM-TX-iD0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aht-9O-0Fb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="UZy-bp-bpB"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="95" y="770"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="testimg.jpg" width="240" height="300"/>
+    </resources>
 </document>
