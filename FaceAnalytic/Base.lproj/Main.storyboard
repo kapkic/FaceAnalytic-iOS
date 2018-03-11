@@ -29,13 +29,12 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FaceAnalytic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="testimg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rWe-6h-PAt">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="testimg" translatesAutoresizingMaskIntoConstraints="NO" id="rWe-6h-PAt">
                                 <rect key="frame" x="14" y="71" width="343" height="211"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -70,6 +69,7 @@
                                 <rect key="frame" x="85" y="328" width="201" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                 <connections>
                                     <action selector="MailEntered:" destination="BYZ-38-t0r" eventType="valueChanged" id="Sa1-aj-FKw"/>
@@ -100,13 +100,13 @@
                         <outlet property="txtMail" destination="Wdy-yS-6j8" id="PHy-Vh-2Ft"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="134" y="87"/>
         </scene>
         <!--Foto-->
         <scene sceneID="KKt-Cc-Rm9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sVN-bQ-aug" sceneMemberID="firstResponder"/>
                 <viewController title="Foto" id="Gx2-kF-Bpb" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gRi-GZ-AdW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -115,6 +115,7 @@
                         <viewLayoutGuide key="safeArea" id="Qiu-E2-6it"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sVN-bQ-aug" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="849" y="-376"/>
         </scene>
@@ -136,7 +137,6 @@
         <!--Analiz-->
         <scene sceneID="ZAU-zq-wpu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hCg-kS-1jW" sceneMemberID="firstResponder"/>
                 <viewController title="Analiz" id="UAM-TX-iD0" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aht-9O-0Fb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -145,11 +145,12 @@
                         <viewLayoutGuide key="safeArea" id="UZy-bp-bpB"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hCg-kS-1jW" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="95" y="770"/>
         </scene>
     </scenes>
     <resources>
-        <image name="testimg.jpg" width="240" height="300"/>
+        <image name="testimg" width="240" height="300"/>
     </resources>
 </document>

@@ -62,13 +62,13 @@ class ViewController: UIViewController {
         let myUrl = URL(string: "http://www.faceanalytic.com/yukle");
         var request = URLRequest(url:myUrl!)
         request.httpMethod = "POST"
-        let postString = "thesadr@gmail.com";
+        //let postString = "thesadr@gmail.com";
         
         
         //multipart
-        let parameters = ["email":postString]
+        let parameters = ["email":"thesadr@gmail.com","termsofuse":"1"]
         let boundary = generateBoundary()
-        guard let mediaImage = Media(withImage: #imageLiteral(resourceName: "testimg.jpg"), forKey:"facephoto") else {return}
+        guard let mediaImage = Media(withImage: #imageLiteral(resourceName: "testimg"), forKey:"facephoto") else {return}
         request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
         let dataBody = createDataBody(withParameters: parameters, media:[mediaImage], boundary: boundary)
         request.httpBody = dataBody
@@ -79,6 +79,8 @@ class ViewController: UIViewController {
                 print (response)
             }
             if let data=data {
+                print ("Data is:")
+                print (String(data:data,encoding: String.Encoding.utf8) as String!)
                 do{
                     let json=try JSONSerialization.jsonObject(with: data, options: [])
                     print(json)
@@ -138,6 +140,7 @@ extension Data {
     mutating func append(_ string: String){
         if let data = string.data(using: .utf8){
             append(data)
+            print (String(data:data,encoding: String.Encoding.utf8) as String!)
         }
     }
 }
