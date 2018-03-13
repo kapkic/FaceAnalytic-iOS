@@ -13,9 +13,11 @@
 		89737C28204B4410000E2364 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89737C26204B4410000E2364 /* Main.storyboard */; };
 		89737C2A204B4410000E2364 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89737C29204B4410000E2364 /* Assets.xcassets */; };
 		89737C2D204B4410000E2364 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89737C2B204B4410000E2364 /* LaunchScreen.storyboard */; };
+		EFCD929A1D1E8A179D64D57E /* Pods_FaceAnalytic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 483AF69F7FD4E187AE9C6DD4 /* Pods_FaceAnalytic.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		483AF69F7FD4E187AE9C6DD4 /* Pods_FaceAnalytic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceAnalytic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89198A52204C9D93003389A5 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		89737C1F204B4410000E2364 /* FaceAnalytic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceAnalytic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89737C22204B4410000E2364 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		89737C29204B4410000E2364 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89737C2C204B4410000E2364 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89737C2E204B4410000E2364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6AECB64139D485B8A9AB4FF /* Pods-FaceAnalytic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAnalytic.release.xcconfig"; path = "Pods/Target Support Files/Pods-FaceAnalytic/Pods-FaceAnalytic.release.xcconfig"; sourceTree = "<group>"; };
+		DC0446D8643FEACA46803A8B /* Pods-FaceAnalytic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAnalytic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FaceAnalytic/Pods-FaceAnalytic.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,16 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFCD929A1D1E8A179D64D57E /* Pods_FaceAnalytic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62205D4AB5AA9FF5B10CC1B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC0446D8643FEACA46803A8B /* Pods-FaceAnalytic.debug.xcconfig */,
+				D6AECB64139D485B8A9AB4FF /* Pods-FaceAnalytic.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		89737C16204B4410000E2364 = {
 			isa = PBXGroup;
 			children = (
 				89737C21204B4410000E2364 /* FaceAnalytic */,
+				62205D4AB5AA9FF5B10CC1B5 /* Pods */,
+				AFDA23BE6009D56008DB6C26 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +84,14 @@
 			path = FaceAnalytic;
 			sourceTree = "<group>";
 		};
+		AFDA23BE6009D56008DB6C26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				483AF69F7FD4E187AE9C6DD4 /* Pods_FaceAnalytic.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -75,9 +99,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89737C31204B4410000E2364 /* Build configuration list for PBXNativeTarget "FaceAnalytic" */;
 			buildPhases = (
+				8298AF48F68F7DE4CB2E3297 /* [CP] Check Pods Manifest.lock */,
 				89737C1B204B4410000E2364 /* Sources */,
 				89737C1C204B4410000E2364 /* Frameworks */,
 				89737C1D204B4410000E2364 /* Resources */,
+				57D6258F33DB252F8ADCA8F2 /* [CP] Embed Pods Frameworks */,
+				5D1A5FB150D59B8A5153FC77 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,6 +161,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		57D6258F33DB252F8ADCA8F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FaceAnalytic/Pods-FaceAnalytic-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FaceAnalytic/Pods-FaceAnalytic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D1A5FB150D59B8A5153FC77 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FaceAnalytic/Pods-FaceAnalytic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8298AF48F68F7DE4CB2E3297 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FaceAnalytic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		89737C1B204B4410000E2364 /* Sources */ = {
@@ -277,11 +358,13 @@
 		};
 		89737C32204B4410000E2364 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC0446D8643FEACA46803A8B /* Pods-FaceAnalytic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FaceAnalytic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ak.FaceAnalytic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -291,11 +374,13 @@
 		};
 		89737C33204B4410000E2364 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6AECB64139D485B8A9AB4FF /* Pods-FaceAnalytic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FaceAnalytic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ak.FaceAnalytic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
