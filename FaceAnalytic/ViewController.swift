@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     @IBOutlet var txtMail : UITextField!
     @IBOutlet var btnPhoto : UIButton!
     @IBOutlet var btnSend : UIButton!
@@ -17,19 +17,27 @@ class ViewController: UIViewController {
     var mail=false;
     var switchbut=false;
     typealias Parameters = [String: String]
+    @IBOutlet var ImageView: UIImageView!
     
     @IBAction func PhotoPress(_ sender: Any) {
+        let imagecontroller = UIImagePickerController()
+        imagecontroller.delegate=self
+        imagecontroller.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        self.present(imagecontroller, animated:true, completion: nil)
         photo=true;
         if (mail && photo && switchbut)
         {
-            
-            btnSend.isEnabled=true;
+        btnSend.isEnabled=true;
+        }else{
+        btnSend.isEnabled=false;
         }
-        else
-        {
-            btnSend.isEnabled=false;
-        }
+        
     }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        ImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func MailEntered(_ sender: Any) {
         mail=true;
         if (mail && photo && switchbut)
@@ -41,6 +49,7 @@ class ViewController: UIViewController {
             btnSend.isEnabled=false;
         }
     }
+    
     @IBAction func Switch(_ sender: Any) {
         switchbut = !switchbut;
         if (mail && photo && switchbut)
@@ -53,10 +62,11 @@ class ViewController: UIViewController {
         }
         print ("woahSwitch")
     }
+    
+    
     @IBAction func StartAnalysis(_ sender: Any) {
         //TODO let's write the fucking history.
-        
-        
+
         let url = "https://www.faceanalytic.com/yukle" /* your API url */
         
         let headers: HTTPHeaders = [
@@ -65,7 +75,8 @@ class ViewController: UIViewController {
         ]
         
         let parameters = ["email":"thesadr@gmail.com","termsofuse":"1"]
-        let imageData = UIImageJPEGRepresentation(#imageLiteral(resourceName: "testimg"), 4.0)
+       // UIImage *imageUpl = [imageView image];
+        let imageData = UIImageJPEGRepresentation(ImageView.image!, 4.0)
         Alamofire.upload(multipartFormData: { (multipartFormData) in
             for (key, value) in parameters {
                 multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)
@@ -95,78 +106,7 @@ class ViewController: UIViewController {
                 print ("Error2 is:")
             }
         }
-        
-        
-        
-//
-//        print ("woah")
-//        /*inputs
-//        input-text name=email type=text
-//         tick-mark name=termsofuse value=0 type=checkbox
-//         id=imgToUpload name=facephoto type=file
-//         */
-//        let myUrl = URL(string: "http://www.faceanalytic.com/yukle");
-//        var request = URLRequest(url:myUrl!)
-//        request.httpMethod = "POST"
-//        //let postString = "thesadr@gmail.com";
-//
-//
-//        //multipart
-//        let parameters = ["email":"thesadr@gmail.com","termsofuse":"1"]
-//        let boundary = generateBoundary()
-//        guard let mediaImage = Media(withImage: #imageLiteral(resourceName: "testimg"), forKey:"facephoto") else {return}
-//        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
-//        let dataBody = createDataBody(withParameters: parameters, media:[mediaImage], boundary: boundary)
-//        request.httpBody = dataBody
-//
-//        let session = URLSession.shared
-//        session.dataTask(with: request) { (data,response,error) in
-//            if let response=response {
-//                print (response)
-//            }
-//            if let data=data {
-//                print ("Data is:")
-//                print (String(data:data,encoding: String.Encoding.utf8) as String!)
-//                do{
-//                    let json=try JSONSerialization.jsonObject(with: data, options: [])
-//                    print(json)
-//                }
-//                catch {
-//                    print(error)
-//                }
-//            }
-//        }.resume()
-//        //
-        
     }
-//
-//    func generateBoundary() -> String {
-//        return "Boundary-\(NSUUID().uuidString)"
-//    }
-//    func createDataBody(withParameters params: Parameters?, media: [Media]?, boundary: String) -> Data {
-//        let lineBreak = "\r\n"
-//        var body = Data()
-//
-//        if let parameters = params {
-//            for (key, value) in parameters {
-//                body.append("--\(boundary + lineBreak)")
-//                body.append("Content-Disposition: form-data; name=\"\(key)\"\(lineBreak + lineBreak)")
-//                body.append("\(value+lineBreak)")
-//            }
-//        }
-//        if let media=media {
-//            for photo in media{
-//                body.append("--\(boundary + lineBreak)")
-//                body.append("Content-Disposition: form-data; name=\"\(photo.key)\"; filename=\"\(photo.filename)\"\(lineBreak)")
-//                body.append("Content-Type: \(photo.mimeType + lineBreak + lineBreak)")
-//                body.append(photo.data)
-//                body.append(lineBreak)
-//            }
-//        }
-//        body.append("--\(boundary)--\(lineBreak)")
-//        return body
-//    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true);
     }
