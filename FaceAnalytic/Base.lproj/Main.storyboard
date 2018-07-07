@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="-889" y="108"/>
         </scene>
-        <!--View Controller-->
+        <!--FaceAnalytic Mobil-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FaceAnalytic" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,35 +35,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="680-pT-SIm">
-                                <rect key="frame" x="94" y="290" width="182" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Fotoğraf Çek/Seç"/>
-                                <connections>
-                                    <action selector="PhotoPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ynk-l8-2xb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnf-oB-16b">
-                                <rect key="frame" x="90" y="407" width="191" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Kişilik Analizini Başlat"/>
-                                <connections>
-                                    <action selector="StartAnalysis:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T35-oA-vEz"/>
-                                    <segue destination="UAM-TX-iD0" kind="show" id="0CY-9b-psr"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHJ-Iz-RTn">
-                                <rect key="frame" x="53" y="369" width="142" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHJ-Iz-RTn">
+                                <rect key="frame" x="127" y="622" width="121" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <state key="normal" title="Kullanım Şartları'nı"/>
+                                <state key="normal" title="Kullanım Şartları"/>
                                 <connections>
                                     <segue destination="7AG-oK-qSa" kind="show" id="xl2-Sf-7Jw"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Posta adresi" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wdy-yS-6j8">
-                                <rect key="frame" x="85" y="328" width="201" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Posta adresi" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wdy-yS-6j8">
+                                <rect key="frame" x="89" y="334" width="197" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="email"/>
@@ -70,29 +52,75 @@
                                     <action selector="MailEntered:" destination="BYZ-38-t0r" eventType="valueChanged" id="Sa1-aj-FKw"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="okudum ve kabul ediyorum." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ov8-iv-iUG">
-                                <rect key="frame" x="188" y="374" width="181" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kullanım şartlarını okudum ve kabul ediyorum." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ov8-iv-iUG">
+                                <rect key="frame" x="65" y="372" width="295.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z9E-8X-ZaH">
-                                <rect key="frame" x="5" y="369" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z9E-8X-ZaH">
+                                <rect key="frame" x="8" y="363" width="51" height="31"/>
                                 <connections>
                                     <action selector="Switch:" destination="BYZ-38-t0r" eventType="valueChanged" id="e5R-2N-p41"/>
                                 </connections>
                             </switch>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="testimg" translatesAutoresizingMaskIntoConstraints="NO" id="rWe-6h-PAt">
-                                <rect key="frame" x="98" y="71" width="178" height="211"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="200" image="testimg" translatesAutoresizingMaskIntoConstraints="NO" id="rWe-6h-PAt">
+                                <rect key="frame" x="87" y="72" width="200" height="200"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zh-9L-jBz">
+                                <rect key="frame" x="196" y="288" width="90" height="30"/>
+                                <state key="normal" title="Fotoğraf Çek"/>
+                                <connections>
+                                    <action selector="CamPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XS1-qQ-xqI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="680-pT-SIm">
+                                <rect key="frame" x="89" y="288" width="90" height="30"/>
+                                <state key="normal" title="Fotoğraf Seç"/>
+                                <connections>
+                                    <action selector="PhotoPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ynk-l8-2xb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnf-oB-16b">
+                                <rect key="frame" x="114" y="405" width="147" height="30"/>
+                                <state key="normal" title="Kişilik Analizini Başlat"/>
+                                <connections>
+                                    <action selector="StartAnalysis:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T35-oA-vEz"/>
+                                    <segue destination="UAM-TX-iD0" kind="show" id="0CY-9b-psr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ov8-iv-iUG" firstAttribute="top" secondItem="Wdy-yS-6j8" secondAttribute="bottom" constant="8" id="0A0-ua-V33"/>
+                            <constraint firstItem="vnf-oB-16b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="114" id="265-UZ-zSi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UHJ-Iz-RTn" secondAttribute="trailing" constant="127" id="9xX-0l-oDi"/>
+                            <constraint firstItem="Ov8-iv-iUG" firstAttribute="leading" secondItem="Z9E-8X-ZaH" secondAttribute="trailing" constant="8" id="JGK-V9-Dbf"/>
+                            <constraint firstItem="1zh-9L-jBz" firstAttribute="width" secondItem="680-pT-SIm" secondAttribute="width" id="Kws-OR-NxS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vnf-oB-16b" secondAttribute="trailing" constant="114" id="Npw-jm-syM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1zh-9L-jBz" secondAttribute="trailing" constant="89" id="QUp-gt-9eb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rWe-6h-PAt" secondAttribute="trailing" constant="88" id="Qdp-SE-IyB"/>
+                            <constraint firstItem="UHJ-Iz-RTn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="STw-Su-NLk"/>
+                            <constraint firstItem="vnf-oB-16b" firstAttribute="top" secondItem="Ov8-iv-iUG" secondAttribute="bottom" constant="16" id="Trl-Xn-VkV"/>
+                            <constraint firstItem="rWe-6h-PAt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="UyO-KU-kSo"/>
+                            <constraint firstItem="Wdy-yS-6j8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="89" id="b32-ot-g7h"/>
+                            <constraint firstItem="rWe-6h-PAt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="biL-Rq-BbN"/>
+                            <constraint firstItem="1zh-9L-jBz" firstAttribute="leading" secondItem="680-pT-SIm" secondAttribute="trailing" constant="17" id="daN-jp-CDd"/>
+                            <constraint firstItem="1zh-9L-jBz" firstAttribute="top" secondItem="rWe-6h-PAt" secondAttribute="bottom" constant="16" id="fck-RT-SHq"/>
+                            <constraint firstItem="Z9E-8X-ZaH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="fxl-za-Rn9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UHJ-Iz-RTn" secondAttribute="bottom" constant="16" id="mJJ-Bd-vTA"/>
+                            <constraint firstItem="680-pT-SIm" firstAttribute="top" secondItem="rWe-6h-PAt" secondAttribute="bottom" constant="16" id="pVR-6t-hvO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wdy-yS-6j8" secondAttribute="trailing" constant="89" id="qfj-B9-bV6"/>
+                            <constraint firstItem="Z9E-8X-ZaH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="299" id="r6S-y1-GuT"/>
+                            <constraint firstItem="1zh-9L-jBz" firstAttribute="height" secondItem="680-pT-SIm" secondAttribute="height" id="t6H-z8-Hdz"/>
+                            <constraint firstItem="680-pT-SIm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="89" id="wDp-9T-tZP"/>
+                            <constraint firstItem="Wdy-yS-6j8" firstAttribute="top" secondItem="1zh-9L-jBz" secondAttribute="bottom" constant="16" id="z6Y-k3-nr5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="q0o-UX-13r"/>
+                    <navigationItem key="navigationItem" title="FaceAnalytic Mobil" id="q0o-UX-13r">
+                        <barButtonItem key="backBarButtonItem" title="Geri" id="j51-6G-I6v"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="ImageView" destination="rWe-6h-PAt" id="Mn4-qK-PTO"/>
                         <outlet property="btnPhoto" destination="680-pT-SIm" id="E0O-wO-HlL"/>
@@ -102,22 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.59999999999999" y="86.806596701649184"/>
-        </scene>
-        <!--Foto-->
-        <scene sceneID="KKt-Cc-Rm9">
-            <objects>
-                <viewController title="Foto" id="Gx2-kF-Bpb" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gRi-GZ-AdW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="Qiu-E2-6it"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sVN-bQ-aug" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="849" y="-376"/>
+            <point key="canvasLocation" x="132" y="85.907046476761622"/>
         </scene>
         <!--Kullanım Şartları-->
         <scene sceneID="EDk-oO-PnC">
@@ -225,7 +238,7 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">2. “faceanalytic.com” sitesi içinde yer alan tüm bilgi ve dokümanlar, karakter analizlerine meraklı olan kullanıcılara yararlı olması gayesiyle bilgisayar bilimleri ve mühendisliği, biyometri, yapay zeka ve yüz okuma uzmanları tarafından hazırlanmıştır. Bu sitenin ve içeriğinin gerek hazırlanması gerekse güncellenmesine dikkat gösterilmekte ise de “faceanalytic.com”; içinde yer alan bilgilerin doğruluğu, güncelliği ve siteden verilen linkler, anket sonuçları, analiz sonuçları nedeniyle hiçbir hukuki sorumluluk kabul etmez. </mutableString>
+                                        <string key="content">2. “faceanalytic.com” sitesi içinde yer alan tüm bilgi ve dokümanlar, karakter analizlerine meraklı olan kullanıcılara yararlı olması gayesiyle bilgisayar bilimleri ve mühendisliği, biyometri, yapay zeka ve yüz okuma uzmanları tarafından hazırlanmıştır. Bu sitenin ve içeriğinin gerek hazırlanması gerekse güncellenmesine dikkat gösterilmekte ise de “faceanalytic.com”; içinde yer alan bilgilerin doğruluğu, güncelliği ve siteden verilen linkler, anket sonuçları, analiz sonuçları nedeniyle hiçbir hukuki sorumluluk kabul etmez. </string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -249,7 +262,7 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">3. “faceanalytic.com” web sayfasından, kullanıcı, okuyucu veya her ne suretle olsun yararlanan tüm ziyaretçiler, bu sayfalarda yer alan tüm yükümlülük, talep, telif kuralları ve yararlanma koşullarını kabul ettikleri ve bunlara aykırı davranışlarının hukuki ve cezai sorumluluklarını gerektireceğini anladıklarını kabul ve taahhüt ederler. </mutableString>
+                                        <string key="content">3. “faceanalytic.com” web sayfasından, kullanıcı, okuyucu veya her ne suretle olsun yararlanan tüm ziyaretçiler, bu sayfalarda yer alan tüm yükümlülük, talep, telif kuralları ve yararlanma koşullarını kabul ettikleri ve bunlara aykırı davranışlarının hukuki ve cezai sorumluluklarını gerektireceğini anladıklarını kabul ve taahhüt ederler. </string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -273,7 +286,7 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">4. “faceanalytic.com” sitesine eklenen yüz verisi üzerinde yapay zeka temelli analiz yapılmakta ve aradaki ilişkilerden karakter analizi yapılmaktadır. Kullanıcı, eğer sistemde herhangi bir analiz yapılmasını arzu ederse açık rızası ile sisteme yüz resmini eklediğini kabul ve beyan eder. Yüz verisi kullanılarak geliştirilen sistem test edilebileceğinden, kullanıcı bunun farkında olarak verisini girer, veriler analiz edilir, istenilen sonuçlar kullanıcıya gönderilir, sonuçlar kullanıcı tarafından değerlendirilebilir, yeni çıktılar sistem üzerinden elde edilebilir. </mutableString>
+                                        <string key="content">4. “faceanalytic.com” sitesine eklenen yüz verisi üzerinde yapay zeka temelli analiz yapılmakta ve aradaki ilişkilerden karakter analizi yapılmaktadır. Kullanıcı, eğer sistemde herhangi bir analiz yapılmasını arzu ederse açık rızası ile sisteme yüz resmini eklediğini kabul ve beyan eder. Yüz verisi kullanılarak geliştirilen sistem test edilebileceğinden, kullanıcı bunun farkında olarak verisini girer, veriler analiz edilir, istenilen sonuçlar kullanıcıya gönderilir, sonuçlar kullanıcı tarafından değerlendirilebilir, yeni çıktılar sistem üzerinden elde edilebilir. </string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -297,7 +310,7 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">5. Başkasına ait içerik ve yüz resimleri sisteme yüklenmemelidir. Elde edilen sonuçlar yayımlanmamalı ve dağıtılmamalıdır. Doğabilecek sorunlardan dolayı “faceanalytic.com” hiç bir şekilde sorumlu tutulamaz. Bunlara aykırı davranışlarının hukuki ve cezai sorumluluklarını gerektireceğini anladıklarını kabul ve taahhüt ederler. </mutableString>
+                                        <string key="content">5. Başkasına ait içerik ve yüz resimleri sisteme yüklenmemelidir. Elde edilen sonuçlar yayımlanmamalı ve dağıtılmamalıdır. Doğabilecek sorunlardan dolayı “faceanalytic.com” hiç bir şekilde sorumlu tutulamaz. Bunlara aykırı davranışlarının hukuki ve cezai sorumluluklarını gerektireceğini anladıklarını kabul ve taahhüt ederler. </string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -321,7 +334,7 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">6. “faceanalytic.com”, kullanıcıların siteyi kullanmasına, farklı resim veya fotoğrafın sisteme yüklemesine kısıtlama veya sınırlama getirme inisiyatifine tek taraflı sahiptir. Sitede dilediği kişilerin analizlerini kısıtlamak, dilediği resimlerin analizini kabul etmemek veya kullanıcıya dilediği zaman kısıtlama uygulamak ya da kullanıcılara dilediği site olanaklarından faydalanmasını kısıtlama hakkını mahfuz tutmaktadır. Başkasına ait resim/ler sunulan sistemde test edilmemelidir. Oluşacak ihlallerden kullanıcı sorumludur. </mutableString>
+                                        <string key="content">6. “faceanalytic.com”, kullanıcıların siteyi kullanmasına, farklı resim veya fotoğrafın sisteme yüklemesine kısıtlama veya sınırlama getirme inisiyatifine tek taraflı sahiptir. Sitede dilediği kişilerin analizlerini kısıtlamak, dilediği resimlerin analizini kabul etmemek veya kullanıcıya dilediği zaman kısıtlama uygulamak ya da kullanıcılara dilediği site olanaklarından faydalanmasını kısıtlama hakkını mahfuz tutmaktadır. Başkasına ait resim/ler sunulan sistemde test edilmemelidir. Oluşacak ihlallerden kullanıcı sorumludur. </string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -393,7 +406,7 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">9. Siteye ziyaretçiler veya kullanıcılar tarafından gönderilen yorumlar ve her türlü içeriğin yayını konusunda inisiyatif “faceanalytic.com” yönetimine aittir. Yönetim, yayımlanan yazıların, raporların, istatistiklerin veya dokümanların gerek görüldüğünde içeriğini, görünümünü, site içindeki yerini değiştirebilir veya yayından kaldırılabilir. </mutableString>
+                                        <string key="content">9. Siteye ziyaretçiler veya kullanıcılar tarafından gönderilen yorumlar ve her türlü içeriğin yayını konusunda inisiyatif “faceanalytic.com” yönetimine aittir. Yönetim, yayımlanan yazıların, raporların, istatistiklerin veya dokümanların gerek görüldüğünde içeriğini, görünümünü, site içindeki yerini değiştirebilir veya yayından kaldırılabilir. </string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -417,7 +430,7 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">10. “faceanalytic.com” sitesinden yararlanan herkes, hukuka davranmak, etik ilkelere saygı duymak ve site kurallarına uymakla yükümlüdür. Hukuki sonuç doğuracak çalışmalar, uygulamalar veya işler için bu sistem kullanılamaz. Kullanıcı bu durumdan doğrudan sorumlu tutulur. </mutableString>
+                                        <string key="content">10. “faceanalytic.com” sitesinden yararlanan herkes, hukuka davranmak, etik ilkelere saygı duymak ve site kurallarına uymakla yükümlüdür. Hukuki sonuç doğuracak çalışmalar, uygulamalar veya işler için bu sistem kullanılamaz. Kullanıcı bu durumdan doğrudan sorumlu tutulur. </string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -441,7 +454,7 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">11. “faceanalytic.com” sitesinin faaliyet ve hizmetleri, şu an için ar-ge amaçlı olarak hizmet vermekte olup ticari bir gaye taşımamaktadır. Çalışma ticari bir amaç için kullanılamaz. “faceanalytic.com”; tüm bu faaliyetleri ve yararlanma koşullarını değiştirme ya da durdurma hakkını saklı tutar.  </mutableString>
+                                        <string key="content">11. “faceanalytic.com” sitesinin faaliyet ve hizmetleri, şu an için ar-ge amaçlı olarak hizmet vermekte olup ticari bir gaye taşımamaktadır. Çalışma ticari bir amaç için kullanılamaz. “faceanalytic.com”; tüm bu faaliyetleri ve yararlanma koşullarını değiştirme ya da durdurma hakkını saklı tutar.  </string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -548,7 +561,7 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">Kişisel veriler hepimiz için önemlidir. “faceanalytic.com” olarak buna son derece önem veriyoruz. Bu nedenle sizi bu konuda en iyi şekilde bilgilendirmek için bu politikaları oluşturduk. Bu web sayfasında verilen veya bu sayfaya yönlendirilen tüm sistemlerimiz/projelerimiz/çalışmalarımız için verilerin toplanması, kullanılması, paylaşılması, aktarılması ve kaydedilmesi, ile ilgili hususlar aşağıda maddeler halinde açıklanmıştır. Kişisel Verileri Koruma Politikamızla ilgili herhangi bir sorunuz olduğu takdirde lütfen iletişime geçiniz. </mutableString>
+                                        <string key="content">Kişisel veriler hepimiz için önemlidir. “faceanalytic.com” olarak buna son derece önem veriyoruz. Bu nedenle sizi bu konuda en iyi şekilde bilgilendirmek için bu politikaları oluşturduk. Bu web sayfasında verilen veya bu sayfaya yönlendirilen tüm sistemlerimiz/projelerimiz/çalışmalarımız için verilerin toplanması, kullanılması, paylaşılması, aktarılması ve kaydedilmesi, ile ilgili hususlar aşağıda maddeler halinde açıklanmıştır. Kişisel Verileri Koruma Politikamızla ilgili herhangi bir sorunuz olduğu takdirde lütfen iletişime geçiniz. </string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -572,7 +585,7 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">Ziyaret ettiğiniz sayfalar, internet erişim adresi, eposta gibi temel konulardan, kullandığınız tarayıcıya kadar her tür bilgiyi, siz kullanıcılarımıza daha iyi hizmet sunmak ve sitemizi daha da geliştirmek amacıyla toplarız. Bu bilgiler, aşağıda maddeler halinde verilmiştir. Sizin bize verdiğiniz bilgiler. Bazı durumlarda sizden belirli verilerinizi (eposta adresi, yaş, yaşadığınız şehir, yüz, yorum), karakter analizi yapmak için isteyebiliriz. Böyle durumlarda, ilgili verileri doğrudan siz bize iletirsiniz. Örneğin, analiz için yüz resminiz, sitedeki herhangi bir içeriğe yorum yaparken vereceğiniz isim, soyisim, e-posta gibi kişisel verileriniz bu bilgi türü kapsamındadır. Bu bilgiler sizden alınmadan önce konu ile ilgili bilgilendirme yapılır, açık rızanız yoksa bu bilgiler alınmaz. Sitemizi kullanımınızdan aldığımız bilgiler. Siteyi kullanımınız ile bağlantılı olarak tanımlama bilgileri ve benzer yöntemleri, sitemizi nasıl kullandığınızı görmek için kullanabiliriz. Örneğin; IP adresi, vb. Cihaz Bilgileri. Sitemize bağlandığınız cihazla ilgili bilgiler. Örneğin donanım modeli, işletim sistemi gibi. Log Kayıtları. Sitemizle olan bağlantınızla ilgili bilgiler. Örneğin arama sorgularınız, kullandığınız tarayıcı türü, tarayıcı dili, siteye giriş zamanlarınız ve sayılarınız ile ne kadar süre sitede vakit geçirdiğiniz gibi. Konum Bilgileri. Sitemize bağlandığınız ülke ve şehirle ilgili bilgiler gibi. Çerezler. Sitemizi ziyaret ettiğinizde bilgi toplamak ve depolamak için çeşitli araçlardan yararlanabiliriz. Bunlar, cihazınıza çerez ya da anonim tanımlayıcı göndermeyi de içerebilir. Fotoğraf/Resimler. Geliştirilen sistemin test edilmesi için, kişilerin resim veya fotoğrafın alınması gereklidir. Dolayısıyla, sistemi kullanmak isteyen her kullanıcıdan bu bilgi zorunlu olarak istenilir. Alınan bu resim veri tabanında belirli bir formatta tutulur. Karakter analizi için kullanılır. Bunun sebebi ise aynı kişiye ait farklı diğer bir fotoğraf kullanıldığında bunun benzerliğinin tespiti ve aynı sonucun aynı kullanıcıya sunulmasını sağlayarak sistemin tutarlılığını artırmak amaçlıdır. Analitik Araçlar. Piwik, Google analytics gibi araçlar kullanılarak bazı istatistiksel bilgiler alınmaktadır. Kullanıcı merkezli olan bu araçlar; mahremiyet duyarlılığı yüksek yazılım araçlarıdır. </mutableString>
+                                        <string key="content">Ziyaret ettiğiniz sayfalar, internet erişim adresi, eposta gibi temel konulardan, kullandığınız tarayıcıya kadar her tür bilgiyi, siz kullanıcılarımıza daha iyi hizmet sunmak ve sitemizi daha da geliştirmek amacıyla toplarız. Bu bilgiler, aşağıda maddeler halinde verilmiştir. Sizin bize verdiğiniz bilgiler. Bazı durumlarda sizden belirli verilerinizi (eposta adresi, yaş, yaşadığınız şehir, yüz, yorum), karakter analizi yapmak için isteyebiliriz. Böyle durumlarda, ilgili verileri doğrudan siz bize iletirsiniz. Örneğin, analiz için yüz resminiz, sitedeki herhangi bir içeriğe yorum yaparken vereceğiniz isim, soyisim, e-posta gibi kişisel verileriniz bu bilgi türü kapsamındadır. Bu bilgiler sizden alınmadan önce konu ile ilgili bilgilendirme yapılır, açık rızanız yoksa bu bilgiler alınmaz. Sitemizi kullanımınızdan aldığımız bilgiler. Siteyi kullanımınız ile bağlantılı olarak tanımlama bilgileri ve benzer yöntemleri, sitemizi nasıl kullandığınızı görmek için kullanabiliriz. Örneğin; IP adresi, vb. Cihaz Bilgileri. Sitemize bağlandığınız cihazla ilgili bilgiler. Örneğin donanım modeli, işletim sistemi gibi. Log Kayıtları. Sitemizle olan bağlantınızla ilgili bilgiler. Örneğin arama sorgularınız, kullandığınız tarayıcı türü, tarayıcı dili, siteye giriş zamanlarınız ve sayılarınız ile ne kadar süre sitede vakit geçirdiğiniz gibi. Konum Bilgileri. Sitemize bağlandığınız ülke ve şehirle ilgili bilgiler gibi. Çerezler. Sitemizi ziyaret ettiğinizde bilgi toplamak ve depolamak için çeşitli araçlardan yararlanabiliriz. Bunlar, cihazınıza çerez ya da anonim tanımlayıcı göndermeyi de içerebilir. Fotoğraf/Resimler. Geliştirilen sistemin test edilmesi için, kişilerin resim veya fotoğrafın alınması gereklidir. Dolayısıyla, sistemi kullanmak isteyen her kullanıcıdan bu bilgi zorunlu olarak istenilir. Alınan bu resim veri tabanında belirli bir formatta tutulur. Karakter analizi için kullanılır. Bunun sebebi ise aynı kişiye ait farklı diğer bir fotoğraf kullanıldığında bunun benzerliğinin tespiti ve aynı sonucun aynı kullanıcıya sunulmasını sağlayarak sistemin tutarlılığını artırmak amaçlıdır. Analitik Araçlar. Piwik, Google analytics gibi araçlar kullanılarak bazı istatistiksel bilgiler alınmaktadır. Kullanıcı merkezli olan bu araçlar; mahremiyet duyarlılığı yüksek yazılım araçlarıdır. </string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -596,7 +609,7 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">Kullanıcı ile ilgili olarak toplanılan bilgiler; karakter analizleri yapmak, talepleri yerine getirmek, sitenin işlevselliğini sağlamak ve projenin kalitesini artırmak, kullanıcı deneyiminizi kişiselleştirmek için kullanılmaktadır. Bunun yanında yasal yükümlülüklere uymak içinde bu veriler kullanılır. Bu Politikada belirtilen amaçların ve mutat kullanım dışında toplanan verilerin farklı amaçlar için kullanılmak istenilmesi durumunda kullanıcılardan izin alınarak kişisel veriler kullanılacaktır. Kişisel bilgilerin, üçüncü kişilerle paylaşılmamasına üst düzey önem verilir. paylaşılması ancak yasal nedenlerden dolayı üçüncü taraflarla paylaşılır. Diğer bir ifadeyle, yasal bir zorunluluk veya bir mahkeme kararı olmaksızın bilgiler asla üçüncü kişilerle paylaşılmaz. </mutableString>
+                                        <string key="content">Kullanıcı ile ilgili olarak toplanılan bilgiler; karakter analizleri yapmak, talepleri yerine getirmek, sitenin işlevselliğini sağlamak ve projenin kalitesini artırmak, kullanıcı deneyiminizi kişiselleştirmek için kullanılmaktadır. Bunun yanında yasal yükümlülüklere uymak içinde bu veriler kullanılır. Bu Politikada belirtilen amaçların ve mutat kullanım dışında toplanan verilerin farklı amaçlar için kullanılmak istenilmesi durumunda kullanıcılardan izin alınarak kişisel veriler kullanılacaktır. Kişisel bilgilerin, üçüncü kişilerle paylaşılmamasına üst düzey önem verilir. paylaşılması ancak yasal nedenlerden dolayı üçüncü taraflarla paylaşılır. Diğer bir ifadeyle, yasal bir zorunluluk veya bir mahkeme kararı olmaksızın bilgiler asla üçüncü kişilerle paylaşılmaz. </string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -620,7 +633,7 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">Toplanılan bilgilerin güvenliği sağlanması için gerekli hassasiyet gösterilir. Ancak internet üzerinden veya mobil aygıtlar aracılığıyla aktarım ve elektronik depolama yöntemlerin yüzde yüz güvenliği garanti edilemediğinden, kişisel bilgilerin korunması konusunda kabul gören yöntemler kullanır, standartlar sağlanır. İşbu Politika, muhtelif zamanlarda gözden geçirilebilir. Bu politikada yapılan değişiklikler, yürürlüğe girme tarihinden belirli bir zaman önce sitede yayımlanır ve gerekli bildirim kullanıcılara yapılır. Değişiklikler etkin olduktan sonra bu portala erişim sağlamaya ya da sunulan hizmetin kullanılmaya devam edilmesi durumunda, revize edilmiş Politikayı, kullanıcı kabul etmiş sayılır. </mutableString>
+                                        <string key="content">Toplanılan bilgilerin güvenliği sağlanması için gerekli hassasiyet gösterilir. Ancak internet üzerinden veya mobil aygıtlar aracılığıyla aktarım ve elektronik depolama yöntemlerin yüzde yüz güvenliği garanti edilemediğinden, kişisel bilgilerin korunması konusunda kabul gören yöntemler kullanır, standartlar sağlanır. İşbu Politika, muhtelif zamanlarda gözden geçirilebilir. Bu politikada yapılan değişiklikler, yürürlüğe girme tarihinden belirli bir zaman önce sitede yayımlanır ve gerekli bildirim kullanıcılara yapılır. Değişiklikler etkin olduktan sonra bu portala erişim sağlamaya ya da sunulan hizmetin kullanılmaya devam edilmesi durumunda, revize edilmiş Politikayı, kullanıcı kabul etmiş sayılır. </string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -702,7 +715,7 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">Yeniliklere ve değişimlere her zaman açığız. Bu bağlamda fikir ve düşüncelerinizi, olumlu ve olumsuz bize ulaştırmanızdan oldukça memnuniyet duyarız. Bu görüşler hizmet ve sunum kalitemizi ve kapasitemizi artırmak için kullanılacaktır. Bize e-posta gönderebilirsiniz. Destek Olunuz. Başarımızı arttıralım ve paylaşalım. </mutableString>
+                                        <string key="content">Yeniliklere ve değişimlere her zaman açığız. Bu bağlamda fikir ve düşüncelerinizi, olumlu ve olumsuz bize ulaştırmanızdan oldukça memnuniyet duyarız. Bu görüşler hizmet ve sunum kalitemizi ve kapasitemizi artırmak için kullanılacaktır. Bize e-posta gönderebilirsiniz. Destek Olunuz. Başarımızı arttıralım ve paylaşalım. </string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -743,17 +756,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="3xB-vt-W3Y" firstAttribute="trailing" secondItem="mPq-8Y-kwQ" secondAttribute="trailing" constant="16" id="45q-ZD-afU"/>
-                            <constraint firstItem="mPq-8Y-kwQ" firstAttribute="top" secondItem="3xB-vt-W3Y" secondAttribute="top" id="Xed-dt-nqx"/>
-                            <constraint firstItem="3xB-vt-W3Y" firstAttribute="bottom" secondItem="mPq-8Y-kwQ" secondAttribute="bottom" constant="20" id="dIi-Xk-eNi"/>
-                            <constraint firstItem="mPq-8Y-kwQ" firstAttribute="leading" secondItem="3xB-vt-W3Y" secondAttribute="leading" constant="16" id="otA-6G-9nI"/>
+                            <constraint firstItem="mPq-8Y-kwQ" firstAttribute="trailing" secondItem="rKe-nC-w9v" secondAttribute="trailingMargin" id="07P-uA-9YX"/>
+                            <constraint firstAttribute="bottom" secondItem="mPq-8Y-kwQ" secondAttribute="bottom" constant="20" symbolic="YES" id="Ihd-Rx-uFw"/>
+                            <constraint firstItem="mPq-8Y-kwQ" firstAttribute="leading" secondItem="rKe-nC-w9v" secondAttribute="leadingMargin" id="Ymf-wH-eXZ"/>
+                            <constraint firstItem="mPq-8Y-kwQ" firstAttribute="top" secondItem="3xB-vt-W3Y" secondAttribute="top" id="lQK-uF-rbR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3xB-vt-W3Y"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vp1-so-VTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="848.79999999999995" y="348.57571214392806"/>
+            <point key="canvasLocation" x="954" y="87"/>
         </scene>
         <!--Analiz-->
         <scene sceneID="ZAU-zq-wpu">
@@ -762,13 +775,58 @@
                     <view key="view" contentMode="scaleToFill" id="aht-9O-0Fb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Fdd-qw-TVB">
+                                <rect key="frame" x="0.0" y="84" width="375" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="7g3-kR-FkU"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Fotoğrafınıza dair kişilik sonuçları e-posta adresinize gönderilmiştir. ">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact">
+                                    <attributedString key="attributedText">
+                                        <fragment content="Fotoğrafınıza dair kişilik sonuçları e-posta adresinize gönderilmiştir. ">
+                                            <attributes>
+                                                <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lütfen e-posta kutunuzu kontrol ediniz, sonuç alamamanız durumunda face2personality@gmail.com adresinden ulaşabilirsiniz." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xxo-pw-5Jv">
+                                <rect key="frame" x="0.0" y="167" width="375" height="81.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Vt2-iq-1pF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UZy-bp-bpB" firstAttribute="trailing" secondItem="Fdd-qw-TVB" secondAttribute="trailing" id="DcL-yU-Afr"/>
+                            <constraint firstItem="xxo-pw-5Jv" firstAttribute="trailing" secondItem="UZy-bp-bpB" secondAttribute="trailing" id="GY5-Sa-Dow"/>
+                            <constraint firstItem="xxo-pw-5Jv" firstAttribute="leading" secondItem="UZy-bp-bpB" secondAttribute="leading" id="IFA-bb-Rp6"/>
+                            <constraint firstItem="UZy-bp-bpB" firstAttribute="bottom" secondItem="xxo-pw-5Jv" secondAttribute="bottom" id="Lfy-oR-ioG"/>
+                            <constraint firstItem="xxo-pw-5Jv" firstAttribute="top" secondItem="Fdd-qw-TVB" secondAttribute="bottom" constant="20" id="dtx-C5-8oZ"/>
+                            <constraint firstItem="Fdd-qw-TVB" firstAttribute="leading" secondItem="UZy-bp-bpB" secondAttribute="leading" id="l3U-xQ-ygb"/>
+                            <constraint firstItem="Fdd-qw-TVB" firstAttribute="top" secondItem="UZy-bp-bpB" secondAttribute="top" constant="20" id="sNg-ef-GVS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UZy-bp-bpB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCg-kS-1jW" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="95" y="770"/>
+            <point key="canvasLocation" x="91.875" y="769.0140845070423"/>
         </scene>
     </scenes>
     <resources>

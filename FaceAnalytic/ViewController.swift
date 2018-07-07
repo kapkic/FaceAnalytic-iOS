@@ -19,6 +19,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     typealias Parameters = [String: String]
     @IBOutlet var ImageView: UIImageView!
     
+    
     @IBAction func PhotoPress(_ sender: Any) {
         let imagecontroller = UIImagePickerController()
         imagecontroller.delegate=self
@@ -36,6 +37,20 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         ImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func CamPress(_ sender: Any) {
+        let imagecontroller = UIImagePickerController()
+        imagecontroller.delegate=self
+        imagecontroller.sourceType = .camera
+        self.present(imagecontroller, animated:true, completion: nil)
+        photo=true;
+        if (mail && photo && switchbut)
+        {
+            btnSend.isEnabled=true;
+        }else{
+            btnSend.isEnabled=false;
+        }
     }
     
     @IBAction func MailEntered(_ sender: Any) {
