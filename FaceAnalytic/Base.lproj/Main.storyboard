@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -52,16 +53,10 @@
                                     <action selector="MailEntered:" destination="BYZ-38-t0r" eventType="valueChanged" id="Sa1-aj-FKw"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ov8-iv-iUG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kullanım şartlarını okudum ve kabul ediyorum." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ov8-iv-iUG">
                                 <rect key="frame" x="65" y="372" width="295.5" height="17"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Kullanım şartlarını okudum ve kabul ediyorum.">
-                                        <attributes>
-                                            <font key="NSFont" metaFont="system" size="14"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z9E-8X-ZaH">
@@ -72,6 +67,9 @@
                             </switch>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="200" image="testimg" translatesAutoresizingMaskIntoConstraints="NO" id="rWe-6h-PAt">
                                 <rect key="frame" x="87" y="72" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rWe-6h-PAt" secondAttribute="height" multiplier="1:1" id="6LZ-R6-SYb"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zh-9L-jBz">
                                 <rect key="frame" x="196" y="288" width="120" height="30"/>
@@ -102,26 +100,25 @@
                             <constraint firstItem="Ov8-iv-iUG" firstAttribute="centerY" secondItem="Z9E-8X-ZaH" secondAttribute="centerY" id="0hO-z0-R8P"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ov8-iv-iUG" secondAttribute="trailing" constant="14.5" id="20f-EX-y1m"/>
                             <constraint firstItem="vnf-oB-16b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="265-UZ-zSi"/>
+                            <constraint firstItem="rWe-6h-PAt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="47t-Mn-WmY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UHJ-Iz-RTn" secondAttribute="trailing" constant="8" id="9xX-0l-oDi"/>
                             <constraint firstItem="1zh-9L-jBz" firstAttribute="centerY" secondItem="680-pT-SIm" secondAttribute="centerY" id="AoU-3N-GMN"/>
                             <constraint firstItem="Ov8-iv-iUG" firstAttribute="leading" secondItem="Z9E-8X-ZaH" secondAttribute="trailing" constant="8" id="JGK-V9-Dbf"/>
+                            <constraint firstItem="rWe-6h-PAt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="KGo-UA-STt"/>
                             <constraint firstItem="1zh-9L-jBz" firstAttribute="width" secondItem="680-pT-SIm" secondAttribute="width" id="Kws-OR-NxS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vnf-oB-16b" secondAttribute="trailing" constant="8" id="Npw-jm-syM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1zh-9L-jBz" secondAttribute="trailing" constant="59" id="QUp-gt-9eb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rWe-6h-PAt" secondAttribute="trailing" constant="88" id="Qdp-SE-IyB"/>
                             <constraint firstItem="UHJ-Iz-RTn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="STw-Su-NLk"/>
                             <constraint firstItem="vnf-oB-16b" firstAttribute="top" secondItem="Ov8-iv-iUG" secondAttribute="bottom" constant="16" id="Trl-Xn-VkV"/>
-                            <constraint firstItem="rWe-6h-PAt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="UyO-KU-kSo"/>
                             <constraint firstItem="Wdy-yS-6j8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="89" id="b32-ot-g7h"/>
-                            <constraint firstItem="rWe-6h-PAt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="biL-Rq-BbN"/>
                             <constraint firstItem="1zh-9L-jBz" firstAttribute="leading" secondItem="680-pT-SIm" secondAttribute="trailing" constant="17" id="daN-jp-CDd"/>
-                            <constraint firstItem="1zh-9L-jBz" firstAttribute="top" secondItem="rWe-6h-PAt" secondAttribute="bottom" constant="16" id="fck-RT-SHq"/>
                             <constraint firstItem="Z9E-8X-ZaH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="fxl-za-Rn9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rWe-6h-PAt" secondAttribute="trailing" constant="88" id="j52-1T-ZqS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UHJ-Iz-RTn" secondAttribute="bottom" constant="16" id="mJJ-Bd-vTA"/>
-                            <constraint firstItem="680-pT-SIm" firstAttribute="top" secondItem="rWe-6h-PAt" secondAttribute="bottom" constant="16" id="pVR-6t-hvO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wdy-yS-6j8" secondAttribute="trailing" constant="89" id="qfj-B9-bV6"/>
                             <constraint firstItem="1zh-9L-jBz" firstAttribute="height" secondItem="680-pT-SIm" secondAttribute="height" id="t6H-z8-Hdz"/>
                             <constraint firstItem="680-pT-SIm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="59" id="wDp-9T-tZP"/>
+                            <constraint firstItem="1zh-9L-jBz" firstAttribute="top" secondItem="rWe-6h-PAt" secondAttribute="bottom" constant="16" id="wUc-Rr-dHM"/>
                             <constraint firstItem="Wdy-yS-6j8" firstAttribute="top" secondItem="1zh-9L-jBz" secondAttribute="bottom" constant="16" id="z6Y-k3-nr5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
