@@ -13,6 +13,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     @IBOutlet var txtMail : UITextField!
     @IBOutlet var btnPhoto : UIButton!
     @IBOutlet var btnSend : UIButton!
+    @IBOutlet var termsText: UITextView!
+    
     var photo=false;
     var mail=false;
     var switchbut=false;
@@ -113,6 +115,12 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
                         print (response)
                         return
                     }
+                    else{
+                        let alert = UIAlertController(title: "Fotograf Gonderildi", message: "Fotoğrafınıza dair kişilik sonuçları e-posta adresinize gönderilmiştir. Lütfen e-posta kutunuzu kontrol ediniz, sonuç alamamanız durumunda face2personality@gmail.com adresinden iletişime geçebilirsiniz.", preferredStyle: .alert)
+                        
+                        alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: nil))                        
+                        self.present(alert, animated: true)
+                    }
                     print ("Completed")
                     //print (String(data:err,encoding: String.Encoding.utf8) as String!)
                 }
@@ -122,6 +130,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             }
         }
     }
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true);
     }

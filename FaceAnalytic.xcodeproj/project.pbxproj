@@ -13,6 +13,7 @@
 		89737C28204B4410000E2364 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89737C26204B4410000E2364 /* Main.storyboard */; };
 		89737C2A204B4410000E2364 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89737C29204B4410000E2364 /* Assets.xcassets */; };
 		89737C2D204B4410000E2364 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89737C2B204B4410000E2364 /* LaunchScreen.storyboard */; };
+		89CBF5C920F3980100EF0942 /* TermsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBF5C820F3980100EF0942 /* TermsController.swift */; };
 		EFCD929A1D1E8A179D64D57E /* Pods_FaceAnalytic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 483AF69F7FD4E187AE9C6DD4 /* Pods_FaceAnalytic.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		89737C29204B4410000E2364 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89737C2C204B4410000E2364 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89737C2E204B4410000E2364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89CBF5C820F3980100EF0942 /* TermsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsController.swift; sourceTree = "<group>"; };
 		D6AECB64139D485B8A9AB4FF /* Pods-FaceAnalytic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAnalytic.release.xcconfig"; path = "Pods/Target Support Files/Pods-FaceAnalytic/Pods-FaceAnalytic.release.xcconfig"; sourceTree = "<group>"; };
 		DC0446D8643FEACA46803A8B /* Pods-FaceAnalytic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAnalytic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FaceAnalytic/Pods-FaceAnalytic.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +82,7 @@
 				89737C29204B4410000E2364 /* Assets.xcassets */,
 				89737C2B204B4410000E2364 /* LaunchScreen.storyboard */,
 				89737C2E204B4410000E2364 /* Info.plist */,
+				89CBF5C820F3980100EF0942 /* TermsController.swift */,
 			);
 			path = FaceAnalytic;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				89737C25204B4410000E2364 /* ViewController.swift in Sources */,
 				89737C23204B4410000E2364 /* AppDelegate.swift in Sources */,
 				89198A53204C9D93003389A5 /* Media.swift in Sources */,
+				89CBF5C920F3980100EF0942 /* TermsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
