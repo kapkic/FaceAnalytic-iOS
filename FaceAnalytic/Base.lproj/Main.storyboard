@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7M3-mw-Fv3">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,7 +16,7 @@
             <objects>
                 <navigationController id="7M3-mw-Fv3" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ICi-Au-ElB">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -32,11 +32,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FaceAnalytic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHJ-Iz-RTn">
-                                <rect key="frame" x="69" y="523" width="105" height="29"/>
+                                <rect key="frame" x="64" y="622" width="105" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Kullanım Şartları"/>
                                 <connections>
@@ -44,7 +44,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9K-Cc-pfJ">
-                                <rect key="frame" x="190" y="523" width="61" height="29"/>
+                                <rect key="frame" x="250" y="622" width="61" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Hakkında"/>
                                 <connections>
@@ -52,7 +52,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Posta adresi" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wdy-yS-6j8">
-                                <rect key="frame" x="89" y="279" width="142" height="30"/>
+                                <rect key="frame" x="89" y="334" width="197" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="email"/>
@@ -61,42 +61,41 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kullanım şartlarını okudum ve kabul ediyorum." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" preferredMaxLayoutWidth="294.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ov8-iv-iUG">
-                                <rect key="frame" x="65" y="317" width="193" height="33.5"/>
+                                <rect key="frame" x="65" y="372" width="193" height="33.5"/>
                                 <viewLayoutGuide key="safeArea" id="Dp9-Ki-2cp"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="200" image="man" translatesAutoresizingMaskIntoConstraints="NO" id="rWe-6h-PAt">
-                                <rect key="frame" x="87" y="72" width="145" height="145"/>
+                                <rect key="frame" x="87" y="72" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rWe-6h-PAt" secondAttribute="height" multiplier="1:1" id="6LZ-R6-SYb"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zh-9L-jBz">
-                                <rect key="frame" x="168.5" y="233" width="92.5" height="30"/>
+                                <rect key="frame" x="196" y="288" width="120" height="30"/>
                                 <state key="normal" title="Fotoğraf Çek"/>
                                 <connections>
                                     <action selector="CamPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XS1-qQ-xqI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="680-pT-SIm">
-                                <rect key="frame" x="59" y="233" width="92.5" height="30"/>
+                                <rect key="frame" x="59" y="288" width="120" height="30"/>
                                 <state key="normal" title="Fotoğraf Seç"/>
                                 <connections>
                                     <action selector="PhotoPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ynk-l8-2xb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnf-oB-16b">
-                                <rect key="frame" x="8" y="365" width="304" height="30"/>
+                                <rect key="frame" x="8" y="420" width="359" height="30"/>
                                 <state key="normal" title="Kişilik Analizini Başlat"/>
                                 <connections>
                                     <action selector="StartAnalysis:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T35-oA-vEz"/>
-                                    <segue destination="UAM-TX-iD0" kind="show" id="0CY-9b-psr"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z9E-8X-ZaH">
-                                <rect key="frame" x="8" y="318" width="51" height="31"/>
+                                <rect key="frame" x="8" y="373" width="51" height="31"/>
                                 <connections>
                                     <action selector="Switch:" destination="BYZ-38-t0r" eventType="valueChanged" id="e5R-2N-p41"/>
                                 </connections>
@@ -104,12 +103,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="f9K-Cc-pfJ" firstAttribute="leading" secondItem="UHJ-Iz-RTn" secondAttribute="trailing" constant="16" id="0kG-mo-C0e"/>
+                            <constraint firstItem="f9K-Cc-pfJ" firstAttribute="leading" secondItem="UHJ-Iz-RTn" secondAttribute="trailing" priority="250" constant="16" id="0kG-mo-C0e"/>
                             <constraint firstItem="vnf-oB-16b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="265-UZ-zSi"/>
                             <constraint firstItem="rWe-6h-PAt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="47t-Mn-WmY"/>
                             <constraint firstItem="1zh-9L-jBz" firstAttribute="centerY" secondItem="680-pT-SIm" secondAttribute="centerY" id="AoU-3N-GMN"/>
                             <constraint firstItem="Ov8-iv-iUG" firstAttribute="top" secondItem="Wdy-yS-6j8" secondAttribute="bottom" constant="8" id="Boe-At-AjX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f9K-Cc-pfJ" secondAttribute="trailing" constant="69" id="HRq-zU-XqZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f9K-Cc-pfJ" secondAttribute="trailing" constant="64" id="HRq-zU-XqZ"/>
                             <constraint firstItem="vnf-oB-16b" firstAttribute="top" secondItem="Z9E-8X-ZaH" secondAttribute="bottom" constant="16" id="J8y-0Q-czv"/>
                             <constraint firstItem="rWe-6h-PAt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="KGo-UA-STt"/>
                             <constraint firstItem="1zh-9L-jBz" firstAttribute="width" secondItem="680-pT-SIm" secondAttribute="width" id="Kws-OR-NxS"/>
@@ -117,7 +116,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1zh-9L-jBz" secondAttribute="trailing" constant="59" id="QUp-gt-9eb"/>
                             <constraint firstItem="Wdy-yS-6j8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="89" id="b32-ot-g7h"/>
                             <constraint firstItem="1zh-9L-jBz" firstAttribute="leading" secondItem="680-pT-SIm" secondAttribute="trailing" constant="17" id="daN-jp-CDd"/>
-                            <constraint firstItem="UHJ-Iz-RTn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="69" id="heU-XN-u9f"/>
+                            <constraint firstItem="UHJ-Iz-RTn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="heU-XN-u9f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rWe-6h-PAt" secondAttribute="trailing" constant="88" id="j52-1T-ZqS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UHJ-Iz-RTn" secondAttribute="bottom" constant="16" id="mJJ-Bd-vTA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f9K-Cc-pfJ" secondAttribute="bottom" constant="16" id="ody-uE-coX"/>
@@ -149,13 +148,13 @@
         <!--Kullanım Şartları-->
         <scene sceneID="EDk-oO-PnC">
             <objects>
-                <viewController title="Kullanım Şartları" id="7AG-oK-qSa" sceneMemberID="viewController">
+                <viewController title="Kullanım Şartları" id="7AG-oK-qSa" customClass="TermsController" customModule="FaceAnalytic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rKe-nC-w9v">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mPq-8Y-kwQ">
-                                <rect key="frame" x="8" y="72" width="304" height="480"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mPq-8Y-kwQ" userLabel="TermsText">
+                                <rect key="frame" x="8" y="72" width="359" height="579"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Yüz Fotoğraflarınızdan Kişilik Analizi Yapan Yapay Zeka Sistemi (faceanalytic.com)">
@@ -777,51 +776,25 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3xB-vt-W3Y"/>
                     </view>
+                    <connections>
+                        <outlet property="termsText" destination="mPq-8Y-kwQ" id="Kqc-OP-bLu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vp1-so-VTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="954" y="87"/>
-        </scene>
-        <!--Analiz-->
-        <scene sceneID="ZAU-zq-wpu">
-            <objects>
-                <viewController title="Analiz" id="UAM-TX-iD0" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aht-9O-0Fb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xxo-pw-5Jv">
-                                <rect key="frame" x="8" y="72" width="304" height="122"/>
-                                <string key="text">Fotoğrafınıza dair kişilik sonuçları e-posta adresinize gönderilmiştir. Lütfen e-posta kutunuzu kontrol ediniz, sonuç alamamanız durumunda face2personality@gmail.com adresinden iletişime geçebilirsiniz.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="xxo-pw-5Jv" firstAttribute="top" secondItem="UZy-bp-bpB" secondAttribute="top" constant="8" id="Fj1-HG-Q8J"/>
-                            <constraint firstItem="UZy-bp-bpB" firstAttribute="trailing" secondItem="xxo-pw-5Jv" secondAttribute="trailing" constant="8" id="SSv-VF-25K"/>
-                            <constraint firstItem="xxo-pw-5Jv" firstAttribute="leading" secondItem="UZy-bp-bpB" secondAttribute="leading" constant="8" id="hPu-fR-1y7"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="UZy-bp-bpB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hCg-kS-1jW" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="90.400000000000006" y="768.66566716641682"/>
+            <point key="canvasLocation" x="887" y="85"/>
         </scene>
         <!--Hakkında-->
         <scene sceneID="hVa-ht-MDx">
             <objects>
                 <viewController title="Hakkında" id="4jB-24-4Ne" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P3w-PH-w4F">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ynf-CR-Yqd">
-                                <rect key="frame" x="8" y="72" width="304" height="488"/>
-                                <mutableString key="text">Dijital yüz resimlerinden kişilik analizi projesi Gazi Üniversitesi Bilgisayar Mühendisliği Bölüm Başkanı Prof. Şeref Sağıroğlu danışmanlığında geliştirilmektedir. 
+                                <rect key="frame" x="8" y="72" width="359" height="587"/>
+                                <string key="text">Dijital yüz resimlerinden kişilik analizi projesi Gazi Üniversitesi Bilgisayar Mühendisliği Bölüm Başkanı Prof. Şeref Sağıroğlu danışmanlığında geliştirilmektedir. 
 
 Projede fizyonomi konusundaki açık kaynaklardan faydalanılarak hazırlanmış olup halen geliştirme çalışmaları devam etmektedir. 
 
@@ -832,7 +805,7 @@ Sistemin başarılı sonuç üretebilmesi için ön cepheden çekilmiş, nötral
 
 Yapılan kişilik analizlerinden bir ücret alınmamaktadır. Geliştirilen sistemden elde edilen sonuçları başarılı bulup/bulmadığınızı bizimle paylaşarak sistemin kalitesini ve doğruluğunu arttırmamıza katkı sağlayabilirsiniz. 
 
-FaceAnalytic Ekibi</mutableString>
+FaceAnalytic Ekibi</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
