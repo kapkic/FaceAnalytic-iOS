@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7M3-mw-Fv3">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,7 +16,7 @@
             <objects>
                 <navigationController id="7M3-mw-Fv3" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ICi-Au-ElB">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -33,19 +32,27 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FaceAnalytic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHJ-Iz-RTn">
-                                <rect key="frame" x="8" y="622" width="359" height="29"/>
+                                <rect key="frame" x="69" y="523" width="105" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Kullanım Şartları"/>
                                 <connections>
                                     <segue destination="7AG-oK-qSa" kind="show" id="xl2-Sf-7Jw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9K-Cc-pfJ">
+                                <rect key="frame" x="190" y="523" width="61" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Hakkında"/>
+                                <connections>
+                                    <segue destination="4jB-24-4Ne" kind="show" id="1fU-Of-EBq"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Posta adresi" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wdy-yS-6j8">
-                                <rect key="frame" x="89" y="334" width="197" height="30"/>
+                                <rect key="frame" x="89" y="279" width="142" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="email"/>
@@ -53,72 +60,74 @@
                                     <action selector="MailEntered:" destination="BYZ-38-t0r" eventType="valueChanged" id="Sa1-aj-FKw"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kullanım şartlarını okudum ve kabul ediyorum." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ov8-iv-iUG">
-                                <rect key="frame" x="65" y="372" width="295.5" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kullanım şartlarını okudum ve kabul ediyorum." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" preferredMaxLayoutWidth="294.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ov8-iv-iUG">
+                                <rect key="frame" x="65" y="317" width="193" height="33.5"/>
+                                <viewLayoutGuide key="safeArea" id="Dp9-Ki-2cp"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z9E-8X-ZaH">
-                                <rect key="frame" x="8" y="365.5" width="51" height="31"/>
-                                <connections>
-                                    <action selector="Switch:" destination="BYZ-38-t0r" eventType="valueChanged" id="e5R-2N-p41"/>
-                                </connections>
-                            </switch>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="200" image="testimg" translatesAutoresizingMaskIntoConstraints="NO" id="rWe-6h-PAt">
-                                <rect key="frame" x="87" y="72" width="200" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="200" image="man" translatesAutoresizingMaskIntoConstraints="NO" id="rWe-6h-PAt">
+                                <rect key="frame" x="87" y="72" width="145" height="145"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rWe-6h-PAt" secondAttribute="height" multiplier="1:1" id="6LZ-R6-SYb"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zh-9L-jBz">
-                                <rect key="frame" x="196" y="288" width="120" height="30"/>
+                                <rect key="frame" x="168.5" y="233" width="92.5" height="30"/>
                                 <state key="normal" title="Fotoğraf Çek"/>
                                 <connections>
                                     <action selector="CamPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XS1-qQ-xqI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="680-pT-SIm">
-                                <rect key="frame" x="59" y="288" width="120" height="30"/>
+                                <rect key="frame" x="59" y="233" width="92.5" height="30"/>
                                 <state key="normal" title="Fotoğraf Seç"/>
                                 <connections>
                                     <action selector="PhotoPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ynk-l8-2xb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnf-oB-16b">
-                                <rect key="frame" x="8" y="405" width="359" height="30"/>
+                                <rect key="frame" x="8" y="365" width="304" height="30"/>
                                 <state key="normal" title="Kişilik Analizini Başlat"/>
                                 <connections>
                                     <action selector="StartAnalysis:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T35-oA-vEz"/>
                                     <segue destination="UAM-TX-iD0" kind="show" id="0CY-9b-psr"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z9E-8X-ZaH">
+                                <rect key="frame" x="8" y="318" width="51" height="31"/>
+                                <connections>
+                                    <action selector="Switch:" destination="BYZ-38-t0r" eventType="valueChanged" id="e5R-2N-p41"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Ov8-iv-iUG" firstAttribute="top" secondItem="Wdy-yS-6j8" secondAttribute="bottom" constant="8" id="0A0-ua-V33"/>
-                            <constraint firstItem="Ov8-iv-iUG" firstAttribute="centerY" secondItem="Z9E-8X-ZaH" secondAttribute="centerY" id="0hO-z0-R8P"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ov8-iv-iUG" secondAttribute="trailing" constant="14.5" id="20f-EX-y1m"/>
+                            <constraint firstItem="f9K-Cc-pfJ" firstAttribute="leading" secondItem="UHJ-Iz-RTn" secondAttribute="trailing" constant="16" id="0kG-mo-C0e"/>
                             <constraint firstItem="vnf-oB-16b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="265-UZ-zSi"/>
                             <constraint firstItem="rWe-6h-PAt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="47t-Mn-WmY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UHJ-Iz-RTn" secondAttribute="trailing" constant="8" id="9xX-0l-oDi"/>
                             <constraint firstItem="1zh-9L-jBz" firstAttribute="centerY" secondItem="680-pT-SIm" secondAttribute="centerY" id="AoU-3N-GMN"/>
-                            <constraint firstItem="Ov8-iv-iUG" firstAttribute="leading" secondItem="Z9E-8X-ZaH" secondAttribute="trailing" constant="8" id="JGK-V9-Dbf"/>
+                            <constraint firstItem="Ov8-iv-iUG" firstAttribute="top" secondItem="Wdy-yS-6j8" secondAttribute="bottom" constant="8" id="Boe-At-AjX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f9K-Cc-pfJ" secondAttribute="trailing" constant="69" id="HRq-zU-XqZ"/>
+                            <constraint firstItem="vnf-oB-16b" firstAttribute="top" secondItem="Z9E-8X-ZaH" secondAttribute="bottom" constant="16" id="J8y-0Q-czv"/>
                             <constraint firstItem="rWe-6h-PAt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="KGo-UA-STt"/>
                             <constraint firstItem="1zh-9L-jBz" firstAttribute="width" secondItem="680-pT-SIm" secondAttribute="width" id="Kws-OR-NxS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vnf-oB-16b" secondAttribute="trailing" constant="8" id="Npw-jm-syM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1zh-9L-jBz" secondAttribute="trailing" constant="59" id="QUp-gt-9eb"/>
-                            <constraint firstItem="UHJ-Iz-RTn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="STw-Su-NLk"/>
-                            <constraint firstItem="vnf-oB-16b" firstAttribute="top" secondItem="Ov8-iv-iUG" secondAttribute="bottom" constant="16" id="Trl-Xn-VkV"/>
                             <constraint firstItem="Wdy-yS-6j8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="89" id="b32-ot-g7h"/>
                             <constraint firstItem="1zh-9L-jBz" firstAttribute="leading" secondItem="680-pT-SIm" secondAttribute="trailing" constant="17" id="daN-jp-CDd"/>
-                            <constraint firstItem="Z9E-8X-ZaH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="fxl-za-Rn9"/>
+                            <constraint firstItem="UHJ-Iz-RTn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="69" id="heU-XN-u9f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rWe-6h-PAt" secondAttribute="trailing" constant="88" id="j52-1T-ZqS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UHJ-Iz-RTn" secondAttribute="bottom" constant="16" id="mJJ-Bd-vTA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f9K-Cc-pfJ" secondAttribute="bottom" constant="16" id="ody-uE-coX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wdy-yS-6j8" secondAttribute="trailing" constant="89" id="qfj-B9-bV6"/>
+                            <constraint firstItem="Z9E-8X-ZaH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="rYQ-zZ-5ny"/>
                             <constraint firstItem="1zh-9L-jBz" firstAttribute="height" secondItem="680-pT-SIm" secondAttribute="height" id="t6H-z8-Hdz"/>
+                            <constraint firstItem="Ov8-iv-iUG" firstAttribute="leading" secondItem="Z9E-8X-ZaH" secondAttribute="trailing" constant="8" id="uqX-Sc-wwl"/>
                             <constraint firstItem="680-pT-SIm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="59" id="wDp-9T-tZP"/>
                             <constraint firstItem="1zh-9L-jBz" firstAttribute="top" secondItem="rWe-6h-PAt" secondAttribute="bottom" constant="16" id="wUc-Rr-dHM"/>
+                            <constraint firstItem="Ov8-iv-iUG" firstAttribute="centerY" secondItem="Z9E-8X-ZaH" secondAttribute="centerY" id="yB1-51-aue"/>
                             <constraint firstItem="Wdy-yS-6j8" firstAttribute="top" secondItem="1zh-9L-jBz" secondAttribute="bottom" constant="16" id="z6Y-k3-nr5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -135,18 +144,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="85.907046476761622"/>
+            <point key="canvasLocation" x="131.25" y="85.563380281690144"/>
         </scene>
         <!--Kullanım Şartları-->
         <scene sceneID="EDk-oO-PnC">
             <objects>
                 <viewController title="Kullanım Şartları" id="7AG-oK-qSa" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rKe-nC-w9v">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mPq-8Y-kwQ">
-                                <rect key="frame" x="16" y="64" width="343" height="583"/>
+                                <rect key="frame" x="8" y="72" width="304" height="480"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Yüz Fotoğraflarınızdan Kişilik Analizi Yapan Yapay Zeka Sistemi (faceanalytic.com)">
@@ -761,10 +770,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="mPq-8Y-kwQ" firstAttribute="trailing" secondItem="rKe-nC-w9v" secondAttribute="trailingMargin" id="07P-uA-9YX"/>
-                            <constraint firstAttribute="bottom" secondItem="mPq-8Y-kwQ" secondAttribute="bottom" constant="20" symbolic="YES" id="Ihd-Rx-uFw"/>
-                            <constraint firstItem="mPq-8Y-kwQ" firstAttribute="leading" secondItem="rKe-nC-w9v" secondAttribute="leadingMargin" id="Ymf-wH-eXZ"/>
-                            <constraint firstItem="mPq-8Y-kwQ" firstAttribute="top" secondItem="3xB-vt-W3Y" secondAttribute="top" id="lQK-uF-rbR"/>
+                            <constraint firstItem="3xB-vt-W3Y" firstAttribute="trailing" secondItem="mPq-8Y-kwQ" secondAttribute="trailing" constant="8" id="2RS-Mf-wC7"/>
+                            <constraint firstItem="3xB-vt-W3Y" firstAttribute="bottom" secondItem="mPq-8Y-kwQ" secondAttribute="bottom" constant="16" id="7av-fd-hSb"/>
+                            <constraint firstItem="mPq-8Y-kwQ" firstAttribute="top" secondItem="3xB-vt-W3Y" secondAttribute="top" constant="8" id="VwN-gV-CsZ"/>
+                            <constraint firstItem="mPq-8Y-kwQ" firstAttribute="leading" secondItem="3xB-vt-W3Y" secondAttribute="leading" constant="8" id="xO9-pp-Vj3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3xB-vt-W3Y"/>
                     </view>
@@ -778,39 +787,12 @@
             <objects>
                 <viewController title="Analiz" id="UAM-TX-iD0" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aht-9O-0Fb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Fdd-qw-TVB">
-                                <rect key="frame" x="0.0" y="84" width="375" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="63" id="7g3-kR-FkU"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Fotoğrafınıza dair kişilik sonuçları e-posta adresinize gönderilmiştir. ">
-                                        <attributes>
-                                            <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact">
-                                    <attributedString key="attributedText">
-                                        <fragment content="Fotoğrafınıza dair kişilik sonuçları e-posta adresinize gönderilmiştir. ">
-                                            <attributes>
-                                                <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lütfen e-posta kutunuzu kontrol ediniz, sonuç alamamanız durumunda face2personality@gmail.com adresinden ulaşabilirsiniz." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xxo-pw-5Jv">
-                                <rect key="frame" x="0.0" y="167" width="375" height="81.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="Vt2-iq-1pF"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xxo-pw-5Jv">
+                                <rect key="frame" x="8" y="72" width="304" height="122"/>
+                                <string key="text">Fotoğrafınıza dair kişilik sonuçları e-posta adresinize gönderilmiştir. Lütfen e-posta kutunuzu kontrol ediniz, sonuç alamamanız durumunda face2personality@gmail.com adresinden iletişime geçebilirsiniz.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -818,23 +800,60 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="UZy-bp-bpB" firstAttribute="trailing" secondItem="Fdd-qw-TVB" secondAttribute="trailing" id="DcL-yU-Afr"/>
-                            <constraint firstItem="xxo-pw-5Jv" firstAttribute="trailing" secondItem="UZy-bp-bpB" secondAttribute="trailing" id="GY5-Sa-Dow"/>
-                            <constraint firstItem="xxo-pw-5Jv" firstAttribute="leading" secondItem="UZy-bp-bpB" secondAttribute="leading" id="IFA-bb-Rp6"/>
-                            <constraint firstItem="UZy-bp-bpB" firstAttribute="bottom" secondItem="xxo-pw-5Jv" secondAttribute="bottom" id="Lfy-oR-ioG"/>
-                            <constraint firstItem="xxo-pw-5Jv" firstAttribute="top" secondItem="Fdd-qw-TVB" secondAttribute="bottom" constant="20" id="dtx-C5-8oZ"/>
-                            <constraint firstItem="Fdd-qw-TVB" firstAttribute="leading" secondItem="UZy-bp-bpB" secondAttribute="leading" id="l3U-xQ-ygb"/>
-                            <constraint firstItem="Fdd-qw-TVB" firstAttribute="top" secondItem="UZy-bp-bpB" secondAttribute="top" constant="20" id="sNg-ef-GVS"/>
+                            <constraint firstItem="xxo-pw-5Jv" firstAttribute="top" secondItem="UZy-bp-bpB" secondAttribute="top" constant="8" id="Fj1-HG-Q8J"/>
+                            <constraint firstItem="UZy-bp-bpB" firstAttribute="trailing" secondItem="xxo-pw-5Jv" secondAttribute="trailing" constant="8" id="SSv-VF-25K"/>
+                            <constraint firstItem="xxo-pw-5Jv" firstAttribute="leading" secondItem="UZy-bp-bpB" secondAttribute="leading" constant="8" id="hPu-fR-1y7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UZy-bp-bpB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCg-kS-1jW" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="91.875" y="769.0140845070423"/>
+            <point key="canvasLocation" x="90.400000000000006" y="768.66566716641682"/>
+        </scene>
+        <!--Hakkında-->
+        <scene sceneID="hVa-ht-MDx">
+            <objects>
+                <viewController title="Hakkında" id="4jB-24-4Ne" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P3w-PH-w4F">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ynf-CR-Yqd">
+                                <rect key="frame" x="8" y="72" width="304" height="488"/>
+                                <mutableString key="text">Dijital yüz resimlerinden kişilik analizi projesi Gazi Üniversitesi Bilgisayar Mühendisliği Bölüm Başkanı Prof. Şeref Sağıroğlu danışmanlığında geliştirilmektedir. 
+
+Projede fizyonomi konusundaki açık kaynaklardan faydalanılarak hazırlanmış olup halen geliştirme çalışmaları devam etmektedir. 
+
+Proje makine öğrenmesi algoritmalarının yanı sıra geometrik hesaplamalar da kullanarak çalışmaktadır. Proje önerisi 2016 yılında "Microsoft Azure for Research" ödülü kazanmıştır. 
+
+Projenin şu anki versyonu Dlib Python altyapısını kullanmaktadır. 
+Sistemin başarılı sonuç üretebilmesi için ön cepheden çekilmiş, nötral duruşunuzu ifade eden, yüz uzuvlarının net olarak görüldüğü gözlüksüz bir resminizi yüklemeniz gerekmektedir. 
+
+Yapılan kişilik analizlerinden bir ücret alınmamaktadır. Geliştirilen sistemden elde edilen sonuçları başarılı bulup/bulmadığınızı bizimle paylaşarak sistemin kalitesini ve doğruluğunu arttırmamıza katkı sağlayabilirsiniz. 
+
+FaceAnalytic Ekibi</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ynf-CR-Yqd" firstAttribute="top" secondItem="V8h-ci-vAi" secondAttribute="top" constant="8" id="QDA-Sb-IvF"/>
+                            <constraint firstItem="ynf-CR-Yqd" firstAttribute="leading" secondItem="V8h-ci-vAi" secondAttribute="leading" constant="8" id="VWg-Pt-ErB"/>
+                            <constraint firstItem="V8h-ci-vAi" firstAttribute="bottom" secondItem="ynf-CR-Yqd" secondAttribute="bottom" constant="8" id="eug-6P-m8y"/>
+                            <constraint firstItem="V8h-ci-vAi" firstAttribute="trailing" secondItem="ynf-CR-Yqd" secondAttribute="trailing" constant="8" id="frk-s5-pXa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V8h-ci-vAi"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gHy-5e-Rht" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953" y="768"/>
         </scene>
     </scenes>
     <resources>
-        <image name="testimg" width="240" height="300"/>
+        <image name="man" width="1244" height="1280"/>
     </resources>
 </document>
