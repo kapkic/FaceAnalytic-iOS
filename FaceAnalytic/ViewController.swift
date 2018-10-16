@@ -9,15 +9,14 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     @IBOutlet var txtMail : UITextField!
     @IBOutlet var btnPhoto : UIButton!
     @IBOutlet var btnSend : UIButton!
-    @IBOutlet var termsText: UITextView!
+    
     
     var photo=false;
     var mail=false;
-    var switchbut=false;
     typealias Parameters = [String: String]
     @IBOutlet var ImageView: UIImageView!
     
@@ -55,7 +54,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         imagecontroller.sourceType = .camera
         self.present(imagecontroller, animated:true, completion: nil)
         photo=true;
-        if (mail && photo && switchbut)
+        print ("photo selected camera")
+        if (mail && photo)
         {
             btnSend.isEnabled=true;
         }else{
@@ -70,7 +70,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         imagecontroller.sourceType = UIImagePickerControllerSourceType.photoLibrary
         self.present(imagecontroller, animated:true, completion: nil)
         photo=true;
-        if (mail && photo && switchbut)
+        print ("photo selected gallery")
+        if (mail && photo)
         {
             btnSend.isEnabled=true;
         }else{
@@ -79,8 +80,21 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
     
     @IBAction func MailEntered(_ sender: Any) {
-        mail=true;
-        if (mail && photo && switchbut)
+        txtMail.returnKeyType = UIReturnKeyType.done
+        
+        let mailAddress: String = txtMail.text!
+        if validateEmail(candidate: mailAddress)
+        {
+            mail=true;
+            print ("mail entered True")
+        }
+        else
+        {
+            mail=false;
+            print ("mail entered False")
+        }
+        
+        if (mail && photo)
         {
             btnSend.isEnabled=true;
         }
@@ -90,7 +104,14 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         }
     }
     
-    @IBAction func Switch(_ sender: Any) {
+
+    
+    func validateEmail(candidate: String) -> Bool {
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with:candidate)
+    }
+    
+    /*@IBAction func Switch(_ sender: Any) {
         switchbut = !switchbut;
         if (mail && photo && switchbut)
         {
@@ -102,7 +123,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         }
         print ("woahSwitch")
     }
-    
+    */
     
     @IBAction func StartAnalysis(_ sender: Any) {
         //TODO let's write the fucking history.
@@ -113,8 +134,9 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             /* "Authorization": "your_access_token",  in case you need authorization header */
             "Content-type": "multipart/form-data"
         ]
+        let mailAddress: String = txtMail.text!
         
-        let parameters = ["email":"thesadr@gmail.com","termsofuse":"1"]
+        let parameters = ["email":mailAddress,"termsofuse":"1"]
        // UIImage *imageUpl = [imageView image];
         let imageData = UIImageJPEGRepresentation(ImageView.image!, 4.0)
         Alamofire.upload(multipartFormData: { (multipartFormData) in
@@ -159,9 +181,15 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-         //btnSend.isEnabled=false;
-        mail=true;
+        btnSend.isEnabled=false;
+        txtMail.returnKeyType = UIReturnKeyType.done
+        txtMail.delegate = self
+        //mail=true;
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    func textFieldShouldReturn(_ txtMail: UITextField) -> Bool{
+        txtMail.resignFirstResponder()
+        return true
     }
 
     override func didReceiveMemoryWarning() {

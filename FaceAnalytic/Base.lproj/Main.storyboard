@@ -30,10 +30,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                 <connections>
-                                    <action selector="MailEntered:" destination="BYZ-38-t0r" eventType="valueChanged" id="Sa1-aj-FKw"/>
+                                    <action selector="MailEntered:" destination="BYZ-38-t0r" eventType="editingChanged" id="N5Y-7h-Q76"/>
                                 </connections>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="200" image="man" translatesAutoresizingMaskIntoConstraints="NO" id="rWe-6h-PAt">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="200" image="DummyPic" translatesAutoresizingMaskIntoConstraints="NO" id="rWe-6h-PAt">
                                 <rect key="frame" x="87" y="72" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rWe-6h-PAt" secondAttribute="height" multiplier="1:1" id="6LZ-R6-SYb"/>
@@ -766,7 +766,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ynf-CR-Yqd">
-                                <rect key="frame" x="8" y="72" width="359" height="519.5"/>
+                                <rect key="frame" x="8" y="28" width="359" height="519.5"/>
                                 <string key="text">Dijital yüz resimlerinden kişilik analizi projesi Gazi Üniversitesi Bilgisayar Mühendisliği Bölüm Başkanı Prof. Şeref Sağıroğlu danışmanlığında geliştirilmektedir. 
 
 Projede fizyonomi konusundaki açık kaynaklardan faydalanılarak hazırlanmış olup halen geliştirme çalışmaları devam etmektedir. 
@@ -794,7 +794,6 @@ FaceAnalytic Ekibi</string>
                         <viewLayoutGuide key="safeArea" id="V8h-ci-vAi"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Hakkında" image="baseline_info_black_24pt" id="pJ2-ei-wnO"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHy-5e-Rht" sceneMemberID="firstResponder"/>
             </objects>
@@ -802,9 +801,9 @@ FaceAnalytic Ekibi</string>
         </scene>
     </scenes>
     <resources>
+        <image name="DummyPic" width="1244" height="1280"/>
         <image name="baseline_description_black_24pt" width="24" height="24"/>
         <image name="baseline_info_black_24pt" width="24" height="24"/>
         <image name="baseline_portrait_black_24pt" width="24" height="24"/>
-        <image name="man" width="1244" height="1280"/>
     </resources>
 </document>
