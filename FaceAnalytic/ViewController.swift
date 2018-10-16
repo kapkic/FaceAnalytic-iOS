@@ -21,30 +21,53 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     typealias Parameters = [String: String]
     @IBOutlet var ImageView: UIImageView!
     
-    
-    @IBAction func PhotoPress(_ sender: Any) {
-        let imagecontroller = UIImagePickerController()
-        imagecontroller.delegate=self
-        imagecontroller.sourceType = UIImagePickerControllerSourceType.photoLibrary
-        self.present(imagecontroller, animated:true, completion: nil)
-        photo=true;
-        if (mail && photo && switchbut)
-        {
-        btnSend.isEnabled=true;
-        }else{
-        btnSend.isEnabled=false;
-        }
-        
-    }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         ImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func CamPress(_ sender: Any) {
+    @IBAction func showActionSheet(_ sender: Any) {
+        let optionMenu = UIAlertController(title:nil,message:"Resim Kaynağı Seçiniz",preferredStyle: .actionSheet)
+        
+        let photoAction = UIAlertAction(title:"Kamera",style:.default,handler:{
+            action in self.getPhoto()
+        })
+        
+        let galleryAction = UIAlertAction(title:"Albüm",style:.default,handler:{
+            action in self.getGallery()
+        })
+       
+        let cancelAction =  UIAlertAction(title:"İptal",style:.cancel,handler:{
+            (action) -> Void in print ("Cancel Pressed")
+        })
+        
+        optionMenu.addAction(photoAction)
+        optionMenu.addAction(galleryAction)
+        optionMenu.addAction(cancelAction)
+        
+        self.present(optionMenu,animated: true,completion:nil)
+    }
+    
+    func getPhoto ()
+    {
         let imagecontroller = UIImagePickerController()
         imagecontroller.delegate=self
         imagecontroller.sourceType = .camera
+        self.present(imagecontroller, animated:true, completion: nil)
+        photo=true;
+        if (mail && photo && switchbut)
+        {
+            btnSend.isEnabled=true;
+        }else{
+            btnSend.isEnabled=false;
+        }
+    }
+    
+    func getGallery ()
+    {
+        let imagecontroller = UIImagePickerController()
+        imagecontroller.delegate=self
+        imagecontroller.sourceType = UIImagePickerControllerSourceType.photoLibrary
         self.present(imagecontroller, animated:true, completion: nil)
         photo=true;
         if (mail && photo && switchbut)
@@ -116,7 +139,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
                         return
                     }
                     else{
-                        let alert = UIAlertController(title: "Fotograf Gonderildi", message: "Fotoğrafınıza dair kişilik sonuçları e-posta adresinize gönderilmiştir. Lütfen e-posta kutunuzu kontrol ediniz, sonuç alamamanız durumunda face2personality@gmail.com adresinden iletişime geçebilirsiniz.", preferredStyle: .alert)
+                        let alert = UIAlertController(title: "Fotoğraf Gönderildi", message: "Fotoğrafınıza dair kişilik sonuçları e-posta adresinize gönderilmiştir. Lütfen e-posta kutunuzu kontrol ediniz, sonuç alamamanız durumunda face2personality@gmail.com adresinden iletişime geçebilirsiniz.", preferredStyle: .alert)
                         
                         alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: nil))                        
                         self.present(alert, animated: true)

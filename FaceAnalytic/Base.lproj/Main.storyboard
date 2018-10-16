@@ -25,7 +25,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ddX-yF-g7v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-889" y="108"/>
+            <point key="canvasLocation" x="-682" y="84"/>
         </scene>
         <!--FaceAnalytic Mobil-->
         <scene sceneID="tne-QT-ifu">
@@ -52,7 +52,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Posta adresi" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wdy-yS-6j8">
-                                <rect key="frame" x="89" y="334" width="197" height="30"/>
+                                <rect key="frame" x="8" y="334" width="359" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="email"/>
@@ -61,7 +61,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kullanım şartlarını okudum ve kabul ediyorum." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" preferredMaxLayoutWidth="294.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ov8-iv-iUG">
-                                <rect key="frame" x="65" y="372" width="193" height="33.5"/>
+                                <rect key="frame" x="65" y="372" width="302" height="33.5"/>
                                 <viewLayoutGuide key="safeArea" id="Dp9-Ki-2cp"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <nil key="textColor"/>
@@ -73,20 +73,6 @@
                                     <constraint firstAttribute="width" secondItem="rWe-6h-PAt" secondAttribute="height" multiplier="1:1" id="6LZ-R6-SYb"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zh-9L-jBz">
-                                <rect key="frame" x="196" y="288" width="120" height="30"/>
-                                <state key="normal" title="Fotoğraf Çek"/>
-                                <connections>
-                                    <action selector="CamPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XS1-qQ-xqI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="680-pT-SIm">
-                                <rect key="frame" x="59" y="288" width="120" height="30"/>
-                                <state key="normal" title="Fotoğraf Seç"/>
-                                <connections>
-                                    <action selector="PhotoPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ynk-l8-2xb"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnf-oB-16b">
                                 <rect key="frame" x="8" y="420" width="359" height="30"/>
                                 <state key="normal" title="Kişilik Analizini Başlat"/>
@@ -100,34 +86,38 @@
                                     <action selector="Switch:" destination="BYZ-38-t0r" eventType="valueChanged" id="e5R-2N-p41"/>
                                 </connections>
                             </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="680-pT-SIm">
+                                <rect key="frame" x="8" y="288" width="359" height="30"/>
+                                <state key="normal" title="Fotoğraf Seç"/>
+                                <connections>
+                                    <action selector="showActionSheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vBp-bq-gic"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="f9K-Cc-pfJ" firstAttribute="leading" secondItem="UHJ-Iz-RTn" secondAttribute="trailing" priority="250" constant="16" id="0kG-mo-C0e"/>
                             <constraint firstItem="vnf-oB-16b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="265-UZ-zSi"/>
                             <constraint firstItem="rWe-6h-PAt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="47t-Mn-WmY"/>
-                            <constraint firstItem="1zh-9L-jBz" firstAttribute="centerY" secondItem="680-pT-SIm" secondAttribute="centerY" id="AoU-3N-GMN"/>
+                            <constraint firstItem="Wdy-yS-6j8" firstAttribute="top" secondItem="680-pT-SIm" secondAttribute="bottom" constant="16" id="7X3-7O-ab7"/>
                             <constraint firstItem="Ov8-iv-iUG" firstAttribute="top" secondItem="Wdy-yS-6j8" secondAttribute="bottom" constant="8" id="Boe-At-AjX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f9K-Cc-pfJ" secondAttribute="trailing" constant="64" id="HRq-zU-XqZ"/>
+                            <constraint firstItem="680-pT-SIm" firstAttribute="top" secondItem="rWe-6h-PAt" secondAttribute="bottom" constant="16" id="Hfr-hZ-lJB"/>
                             <constraint firstItem="vnf-oB-16b" firstAttribute="top" secondItem="Z9E-8X-ZaH" secondAttribute="bottom" constant="16" id="J8y-0Q-czv"/>
                             <constraint firstItem="rWe-6h-PAt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="KGo-UA-STt"/>
-                            <constraint firstItem="1zh-9L-jBz" firstAttribute="width" secondItem="680-pT-SIm" secondAttribute="width" id="Kws-OR-NxS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vnf-oB-16b" secondAttribute="trailing" constant="8" id="Npw-jm-syM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1zh-9L-jBz" secondAttribute="trailing" constant="59" id="QUp-gt-9eb"/>
-                            <constraint firstItem="Wdy-yS-6j8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="89" id="b32-ot-g7h"/>
-                            <constraint firstItem="1zh-9L-jBz" firstAttribute="leading" secondItem="680-pT-SIm" secondAttribute="trailing" constant="17" id="daN-jp-CDd"/>
+                            <constraint firstItem="680-pT-SIm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="VW9-9l-6yl"/>
+                            <constraint firstItem="Wdy-yS-6j8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="b32-ot-g7h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="680-pT-SIm" secondAttribute="trailing" constant="8" id="bog-bi-neg"/>
                             <constraint firstItem="UHJ-Iz-RTn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="heU-XN-u9f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rWe-6h-PAt" secondAttribute="trailing" constant="88" id="j52-1T-ZqS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UHJ-Iz-RTn" secondAttribute="bottom" constant="16" id="mJJ-Bd-vTA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f9K-Cc-pfJ" secondAttribute="bottom" constant="16" id="ody-uE-coX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wdy-yS-6j8" secondAttribute="trailing" constant="89" id="qfj-B9-bV6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wdy-yS-6j8" secondAttribute="trailing" constant="8" id="qfj-B9-bV6"/>
                             <constraint firstItem="Z9E-8X-ZaH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="rYQ-zZ-5ny"/>
-                            <constraint firstItem="1zh-9L-jBz" firstAttribute="height" secondItem="680-pT-SIm" secondAttribute="height" id="t6H-z8-Hdz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ov8-iv-iUG" secondAttribute="trailing" constant="8" id="sMX-29-HcG"/>
                             <constraint firstItem="Ov8-iv-iUG" firstAttribute="leading" secondItem="Z9E-8X-ZaH" secondAttribute="trailing" constant="8" id="uqX-Sc-wwl"/>
-                            <constraint firstItem="680-pT-SIm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="59" id="wDp-9T-tZP"/>
-                            <constraint firstItem="1zh-9L-jBz" firstAttribute="top" secondItem="rWe-6h-PAt" secondAttribute="bottom" constant="16" id="wUc-Rr-dHM"/>
                             <constraint firstItem="Ov8-iv-iUG" firstAttribute="centerY" secondItem="Z9E-8X-ZaH" secondAttribute="centerY" id="yB1-51-aue"/>
-                            <constraint firstItem="Wdy-yS-6j8" firstAttribute="top" secondItem="1zh-9L-jBz" secondAttribute="bottom" constant="16" id="z6Y-k3-nr5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -793,7 +783,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ynf-CR-Yqd">
-                                <rect key="frame" x="8" y="72" width="359" height="587"/>
+                                <rect key="frame" x="8" y="72" width="359" height="519.5"/>
                                 <string key="text">Dijital yüz resimlerinden kişilik analizi projesi Gazi Üniversitesi Bilgisayar Mühendisliği Bölüm Başkanı Prof. Şeref Sağıroğlu danışmanlığında geliştirilmektedir. 
 
 Projede fizyonomi konusundaki açık kaynaklardan faydalanılarak hazırlanmış olup halen geliştirme çalışmaları devam etmektedir. 
@@ -815,7 +805,7 @@ FaceAnalytic Ekibi</string>
                         <constraints>
                             <constraint firstItem="ynf-CR-Yqd" firstAttribute="top" secondItem="V8h-ci-vAi" secondAttribute="top" constant="8" id="QDA-Sb-IvF"/>
                             <constraint firstItem="ynf-CR-Yqd" firstAttribute="leading" secondItem="V8h-ci-vAi" secondAttribute="leading" constant="8" id="VWg-Pt-ErB"/>
-                            <constraint firstItem="V8h-ci-vAi" firstAttribute="bottom" secondItem="ynf-CR-Yqd" secondAttribute="bottom" constant="8" id="eug-6P-m8y"/>
+                            <constraint firstItem="V8h-ci-vAi" firstAttribute="bottom" secondItem="ynf-CR-Yqd" secondAttribute="bottom" priority="250" constant="8" id="eug-6P-m8y"/>
                             <constraint firstItem="V8h-ci-vAi" firstAttribute="trailing" secondItem="ynf-CR-Yqd" secondAttribute="trailing" constant="8" id="frk-s5-pXa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="V8h-ci-vAi"/>
@@ -823,7 +813,7 @@ FaceAnalytic Ekibi</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHy-5e-Rht" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="953" y="768"/>
+            <point key="canvasLocation" x="886" y="763"/>
         </scene>
     </scenes>
     <resources>
