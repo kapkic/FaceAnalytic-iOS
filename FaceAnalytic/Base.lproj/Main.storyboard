@@ -1,139 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7M3-mw-Fv3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LYe-Lh-I1I">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="gHe-UQ-00m">
-            <objects>
-                <navigationController id="7M3-mw-Fv3" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ICi-Au-ElB">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="r4J-oP-jjQ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ddX-yF-g7v" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-889" y="108"/>
-        </scene>
-        <!--FaceAnalytic Mobil-->
+        <!--Face Analytic-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FaceAnalytic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Face Analytic" id="BYZ-38-t0r" customClass="ViewController" customModule="FaceAnalytic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHJ-Iz-RTn">
-                                <rect key="frame" x="64" y="622" width="105" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <state key="normal" title="Kullanım Şartları"/>
-                                <connections>
-                                    <segue destination="7AG-oK-qSa" kind="show" id="xl2-Sf-7Jw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9K-Cc-pfJ">
-                                <rect key="frame" x="250" y="622" width="61" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <state key="normal" title="Hakkında"/>
-                                <connections>
-                                    <segue destination="4jB-24-4Ne" kind="show" id="1fU-Of-EBq"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Posta adresi" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wdy-yS-6j8">
-                                <rect key="frame" x="89" y="334" width="197" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wdy-yS-6j8">
+                                <rect key="frame" x="8" y="334" width="359" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                 <connections>
-                                    <action selector="MailEntered:" destination="BYZ-38-t0r" eventType="valueChanged" id="Sa1-aj-FKw"/>
+                                    <action selector="MailEntered:" destination="BYZ-38-t0r" eventType="editingChanged" id="N5Y-7h-Q76"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kullanım şartlarını okudum ve kabul ediyorum." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" preferredMaxLayoutWidth="294.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ov8-iv-iUG">
-                                <rect key="frame" x="65" y="372" width="193" height="33.5"/>
-                                <viewLayoutGuide key="safeArea" id="Dp9-Ki-2cp"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="200" image="man" translatesAutoresizingMaskIntoConstraints="NO" id="rWe-6h-PAt">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="200" image="DummyPic" translatesAutoresizingMaskIntoConstraints="NO" id="rWe-6h-PAt">
                                 <rect key="frame" x="87" y="72" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rWe-6h-PAt" secondAttribute="height" multiplier="1:1" id="6LZ-R6-SYb"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zh-9L-jBz">
-                                <rect key="frame" x="196" y="288" width="120" height="30"/>
-                                <state key="normal" title="Fotoğraf Çek"/>
-                                <connections>
-                                    <action selector="CamPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XS1-qQ-xqI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="680-pT-SIm">
-                                <rect key="frame" x="59" y="288" width="120" height="30"/>
-                                <state key="normal" title="Fotoğraf Seç"/>
-                                <connections>
-                                    <action selector="PhotoPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ynk-l8-2xb"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnf-oB-16b">
-                                <rect key="frame" x="8" y="420" width="359" height="30"/>
-                                <state key="normal" title="Kişilik Analizini Başlat"/>
+                                <rect key="frame" x="8" y="541" width="359" height="30"/>
+                                <state key="normal" title="Start Personality Analysis"/>
                                 <connections>
                                     <action selector="StartAnalysis:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T35-oA-vEz"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z9E-8X-ZaH">
-                                <rect key="frame" x="8" y="373" width="51" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="680-pT-SIm">
+                                <rect key="frame" x="8" y="288" width="359" height="30"/>
+                                <state key="normal" title="Pick Image"/>
                                 <connections>
-                                    <action selector="Switch:" destination="BYZ-38-t0r" eventType="valueChanged" id="e5R-2N-p41"/>
+                                    <action selector="showActionSheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vBp-bq-gic"/>
                                 </connections>
-                            </switch>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By starting a personality analysis you acknowledge reading and having accepted the terms &amp; conditions." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" preferredMaxLayoutWidth="294.5" translatesAutoresizingMaskIntoConstraints="NO" id="lLp-Oj-tI7">
+                                <rect key="frame" x="8" y="587" width="359" height="23"/>
+                                <viewLayoutGuide key="safeArea" id="uep-Yd-fNV"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="f9K-Cc-pfJ" firstAttribute="leading" secondItem="UHJ-Iz-RTn" secondAttribute="trailing" priority="250" constant="16" id="0kG-mo-C0e"/>
                             <constraint firstItem="vnf-oB-16b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="265-UZ-zSi"/>
                             <constraint firstItem="rWe-6h-PAt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="47t-Mn-WmY"/>
-                            <constraint firstItem="1zh-9L-jBz" firstAttribute="centerY" secondItem="680-pT-SIm" secondAttribute="centerY" id="AoU-3N-GMN"/>
-                            <constraint firstItem="Ov8-iv-iUG" firstAttribute="top" secondItem="Wdy-yS-6j8" secondAttribute="bottom" constant="8" id="Boe-At-AjX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f9K-Cc-pfJ" secondAttribute="trailing" constant="64" id="HRq-zU-XqZ"/>
-                            <constraint firstItem="vnf-oB-16b" firstAttribute="top" secondItem="Z9E-8X-ZaH" secondAttribute="bottom" constant="16" id="J8y-0Q-czv"/>
+                            <constraint firstItem="Wdy-yS-6j8" firstAttribute="top" secondItem="680-pT-SIm" secondAttribute="bottom" constant="16" id="7X3-7O-ab7"/>
+                            <constraint firstItem="680-pT-SIm" firstAttribute="top" secondItem="rWe-6h-PAt" secondAttribute="bottom" constant="16" id="Hfr-hZ-lJB"/>
                             <constraint firstItem="rWe-6h-PAt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="KGo-UA-STt"/>
-                            <constraint firstItem="1zh-9L-jBz" firstAttribute="width" secondItem="680-pT-SIm" secondAttribute="width" id="Kws-OR-NxS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lLp-Oj-tI7" secondAttribute="trailing" constant="8" id="KoC-V9-8wU"/>
+                            <constraint firstItem="lLp-Oj-tI7" firstAttribute="top" secondItem="vnf-oB-16b" secondAttribute="bottom" constant="16" id="N2w-Bu-Bhb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vnf-oB-16b" secondAttribute="trailing" constant="8" id="Npw-jm-syM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1zh-9L-jBz" secondAttribute="trailing" constant="59" id="QUp-gt-9eb"/>
-                            <constraint firstItem="Wdy-yS-6j8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="89" id="b32-ot-g7h"/>
-                            <constraint firstItem="1zh-9L-jBz" firstAttribute="leading" secondItem="680-pT-SIm" secondAttribute="trailing" constant="17" id="daN-jp-CDd"/>
-                            <constraint firstItem="UHJ-Iz-RTn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="heU-XN-u9f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lLp-Oj-tI7" secondAttribute="bottom" constant="8" id="Oec-3l-NYC"/>
+                            <constraint firstItem="680-pT-SIm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="VW9-9l-6yl"/>
+                            <constraint firstItem="Wdy-yS-6j8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="b32-ot-g7h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="680-pT-SIm" secondAttribute="trailing" constant="8" id="bog-bi-neg"/>
+                            <constraint firstItem="lLp-Oj-tI7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="eAm-r0-azU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rWe-6h-PAt" secondAttribute="trailing" constant="88" id="j52-1T-ZqS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UHJ-Iz-RTn" secondAttribute="bottom" constant="16" id="mJJ-Bd-vTA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f9K-Cc-pfJ" secondAttribute="bottom" constant="16" id="ody-uE-coX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wdy-yS-6j8" secondAttribute="trailing" constant="89" id="qfj-B9-bV6"/>
-                            <constraint firstItem="Z9E-8X-ZaH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="rYQ-zZ-5ny"/>
-                            <constraint firstItem="1zh-9L-jBz" firstAttribute="height" secondItem="680-pT-SIm" secondAttribute="height" id="t6H-z8-Hdz"/>
-                            <constraint firstItem="Ov8-iv-iUG" firstAttribute="leading" secondItem="Z9E-8X-ZaH" secondAttribute="trailing" constant="8" id="uqX-Sc-wwl"/>
-                            <constraint firstItem="680-pT-SIm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="59" id="wDp-9T-tZP"/>
-                            <constraint firstItem="1zh-9L-jBz" firstAttribute="top" secondItem="rWe-6h-PAt" secondAttribute="bottom" constant="16" id="wUc-Rr-dHM"/>
-                            <constraint firstItem="Ov8-iv-iUG" firstAttribute="centerY" secondItem="Z9E-8X-ZaH" secondAttribute="centerY" id="yB1-51-aue"/>
-                            <constraint firstItem="Wdy-yS-6j8" firstAttribute="top" secondItem="1zh-9L-jBz" secondAttribute="bottom" constant="16" id="z6Y-k3-nr5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wdy-yS-6j8" secondAttribute="trailing" constant="8" id="qfj-B9-bV6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="FaceAnalytic Mobil" id="q0o-UX-13r">
-                        <barButtonItem key="backBarButtonItem" title="Geri" id="j51-6G-I6v"/>
+                    <tabBarItem key="tabBarItem" title="Personality Analysis" image="baseline_portrait_black_24pt" id="M9x-S5-pDt"/>
+                    <navigationItem key="navigationItem" title="FaceAnalytic Mobile" id="q0o-UX-13r">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="j51-6G-I6v"/>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="ImageView" destination="rWe-6h-PAt" id="Mn4-qK-PTO"/>
                         <outlet property="btnPhoto" destination="680-pT-SIm" id="E0O-wO-HlL"/>
@@ -143,624 +89,184 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.25" y="85.563380281690144"/>
+            <point key="canvasLocation" x="159" y="489"/>
         </scene>
-        <!--Kullanım Şartları-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="Hvh-tF-xXy">
+            <objects>
+                <tabBarController id="LYe-Lh-I1I" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FCd-Ho-Lb7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="rDe-JU-WB7"/>
+                        <segue destination="7AG-oK-qSa" kind="relationship" relationship="viewControllers" id="6fA-7w-uq6"/>
+                        <segue destination="4jB-24-4Ne" kind="relationship" relationship="viewControllers" id="ipI-0N-6jD"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8A9-Ib-hGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-730" y="18"/>
+        </scene>
+        <!--Terms & Conditions-->
         <scene sceneID="EDk-oO-PnC">
             <objects>
-                <viewController title="Kullanım Şartları" id="7AG-oK-qSa" customClass="TermsController" customModule="FaceAnalytic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Terms &amp; Conditions" id="7AG-oK-qSa" customClass="TermsController" customModule="FaceAnalytic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rKe-nC-w9v">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mPq-8Y-kwQ" userLabel="TermsText">
-                                <rect key="frame" x="8" y="72" width="359" height="579"/>
+                                <rect key="frame" x="8" y="72" width="359" height="530"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Yüz Fotoğraflarınızdan Kişilik Analizi Yapan Yapay Zeka Sistemi (faceanalytic.com)">
+                                    <fragment content="TERMS OF USE AND PRIVACY POLICY ">
                                         <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.23921999999999999" green="0.23921999999999999" blue="0.23921999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica-Bold"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="systemBold" size="12"/>
                                             <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.23921999999999999" green="0.23921999999999999" blue="0.23921999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=" ">
-                                        <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="  ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="HİZMET ŞARTLARI">
-                                        <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.23921999999999999" green="0.23921999999999999" blue="0.23921999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica-Bold"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.23921999999999999" green="0.23921999999999999" blue="0.23921999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=" ">
-                                        <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="  ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="1. “faceanalytic.com” portalı eğlence amacıyla hazırlanmış bir site olup, kişilerin haklarına saygı duyar. ">
-                                        <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="  ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <real key="NSStrokeWidth" value="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">2. “faceanalytic.com” sitesi içinde yer alan tüm bilgi ve dokümanlar, karakter analizlerine meraklı olan kullanıcılara yararlı olması gayesiyle bilgisayar bilimleri ve mühendisliği, biyometri, yapay zeka ve yüz okuma uzmanları tarafından hazırlanmıştır. Bu sitenin ve içeriğinin gerek hazırlanması gerekse güncellenmesine dikkat gösterilmekte ise de “faceanalytic.com”; içinde yer alan bilgilerin doğruluğu, güncelliği ve siteden verilen linkler, anket sonuçları, analiz sonuçları nedeniyle hiçbir hukuki sorumluluk kabul etmez. </string>
+                                        <mutableString key="content"> 
+
+1. “faceanalytic.com” is an online website service that it makes personality analysis by face images of the persons. All information, outputs and documents in scope of this website have been generated to serve to users who are curious about personality analysis, to help for those persons, to make academic works and to contribute the works which will contribute to development of this field in our country. 
+
+2. "faceanalytic.com” processes the face images taken from the users, makes "personality analysis from face" with an intelligent model that has been developed by these data. the process of "personality analysis from face" starts when the user uploads a face photo of his/her own to the system. From this photo, face features of the user are extracted, these extracted features are fed into the intelligent model for personality analysis, the intelligent model makes the personality analysis of the user based on these data and the results are sent to the e-mail adress provided by the user. In these results, there also exists a questionnaire for taking the feedback of the user. To answer this quastionnaire is optional. 
+
+3. The face photo entered by the user in "faceanalytic.com" portal is stored in a secure way in the system. this photo is used in cases of the entrance of the different photos of the same person. In addition, these collected photos are used time to time for incresing the quality of the system and provided service and in cases of updates to increase the security of the personlity analysis. 
+
+4. Usage of the service by the user initiates by giving the "electronic approval" which ensures that the user has read and accepted the "terms of use". 
+
+5. The users below 18 years old can not benefit from the services of the "faceanalytic.com". 
+
+6. The user states that he/she has read and accepted the terms of use to benefit from "faceanalytic.com". "Electronic approval" is required for this process. The user approves and the services is initiated. 
+
+7. Face data is analysed in "faceanalytic.com". Face features are extracted and used in an AI based data analysis process and personality analysis is made by utlizing the relationships between the features. The user who wants any analysis in the system and to benefit from the system accepts that -by giving the "electronic approval"- the face photo will be used in analysis and knows that the outputs of the analysis will be sent to the provided e-mail address and accepts and proclaims these by his/her "explicit consent". 
+
+8. "faceanalytic.com" stores the data of the users in a secure way by using up to date technologies.  
+
+9. The user uses the application only for photo of his/her own. Any content or face photo owned by others can not be uploaded to the system. otherwise, the user is responsible for this violation. faceanalytic.com can not never be hold responsible for any problems that may arise and for the unforeseen things, applications and works that will cause illegal issues. Judicial and penal responsibilites are owned by the user. 
+
+10. The application and service provided in faceanalytic.com"" can not be used commercial activities of 3. parties. In case of violation of this, the user promises to hold Judicial and penal responsibilites. 
+
+11. The data entered to faceanalytic.com to use the service is considered true. "faceanalytic.com" can not be hold responsible for the mistakes that may arise from Wrong or misleading statements.   
+
+12. In cases of detection of users that violates the provided service, "faceanalytic.com" may restrict these users when using the portal, when uploading different image or photo to the system and when making analysis in the system. 
+
+13. "faceanalytic.com" administration may change the appearance and places of the published writings, reports, statistics or documents when necessary and may publish new outputs and unpublish some contents. users track these changes in website. 
+
+14. "faceanalytic.com" users behave in a legal way, respect to the ethical tenets and obey with terms of use of the website. 
+
+15. "faceanalytic.com" holds the rights of changing or ceasing the services or terms of use. 
+
+16. "faceanalytic.com" holds the rights and responsibility of updating terms of use. Users are informed about these changes through the website. 
+
+17. The personaity analysis tests provided by the intelligent model in this portal is just informative. this portal is used by being aware of that the system can not analyse the personality in the desired level of accuracy yet. 
+
+18. Since this portal is under test phase, no guraantee is given about the correctness of the outputs of the analyses despite the attention given to the preparation, presentation and update of the website. 
+
+19. "faceanalytic.com" doesn't accept any judicial responsibility that may arise from outputs of analysis results provided by the system. 
+
+20. Issiues related to the colleciton, usage, sharing, transportation and storing of the data for our works in this portal or mobile application are explanied in the following items:  
+-Information about visited pages, internet access address and browser is collected to serve better and to improve the website. 
+- In some cases, to make personaliy analysis: 
+  -- face photo for analysis 
+  -- first name, last name, e-mail to make comment on any content in the portal 
+  -- responses of questionnaire 
+are obtanied by explicit consent of the user. 
+-Identification information and similar methods are used for watching how the users use the website. for example, IP address, device information (hardware model, operating system), log records, connection information, search queries, browser type, browser language, access times, access numbers, duration in the portal, location information, country and city information and cookies. when the user visits the portal these information can be collected and stored bu using some tools including sending cookies and identifier information to user's device. 
+-Some statistical information is collected by Piwik, Google Analytics and similar tools. 
+-Information related to user is used for making personality analysis, responding to the demands, improving the functionality of the website, improving the quality of the project and customizing the user's experience. 
+
+21. In cases except the aims in this policy and regular usage, personal information is collected and used by allowance of the users. Personal information is not shared with 3. parties without judicial necessities or court rulings.  
+
+22. We behave in a sensible way for securing the collected data but the security of data transportion via internet or mobile applications and digital storage methods is not guaranteed 100 percent therefore for securing the personal information accepted methods and standarts are used. This policy can be reviewed in several times. Changes in this policy are published and presented in the website to the users before coming into operation. After coming into effect, users are considered that they have accepted the updated version of the policy to contiune to use the provided services.  
+
+23. Users have the right of demanding to delete their data from the system. This is done through a procedure after application. 
+
+24. All visitors Who use or benefit from the services of "faceanalytic.com" vow that they have read and accepted the issues under this "TERMS OF USE" and hold the all responsibility. 
+
+</mutableString>
                                         <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="12"/>
                                             <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <real key="NSStrokeWidth" value="0.0"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="  ">
+                                    <fragment content="Contact:">
                                         <attributes>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="systemBold" size="12"/>
                                             <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">3. “faceanalytic.com” web sayfasından, kullanıcı, okuyucu veya her ne suretle olsun yararlanan tüm ziyaretçiler, bu sayfalarda yer alan tüm yükümlülük, talep, telif kuralları ve yararlanma koşullarını kabul ettikleri ve bunlara aykırı davranışlarının hukuki ve cezai sorumluluklarını gerektireceğini anladıklarını kabul ve taahhüt ederler. </string>
-                                        <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="  ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">4. “faceanalytic.com” sitesine eklenen yüz verisi üzerinde yapay zeka temelli analiz yapılmakta ve aradaki ilişkilerden karakter analizi yapılmaktadır. Kullanıcı, eğer sistemde herhangi bir analiz yapılmasını arzu ederse açık rızası ile sisteme yüz resmini eklediğini kabul ve beyan eder. Yüz verisi kullanılarak geliştirilen sistem test edilebileceğinden, kullanıcı bunun farkında olarak verisini girer, veriler analiz edilir, istenilen sonuçlar kullanıcıya gönderilir, sonuçlar kullanıcı tarafından değerlendirilebilir, yeni çıktılar sistem üzerinden elde edilebilir. </string>
-                                        <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="  ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">5. Başkasına ait içerik ve yüz resimleri sisteme yüklenmemelidir. Elde edilen sonuçlar yayımlanmamalı ve dağıtılmamalıdır. Doğabilecek sorunlardan dolayı “faceanalytic.com” hiç bir şekilde sorumlu tutulamaz. Bunlara aykırı davranışlarının hukuki ve cezai sorumluluklarını gerektireceğini anladıklarını kabul ve taahhüt ederler. </string>
-                                        <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="  ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <real key="NSStrokeWidth" value="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">6. “faceanalytic.com”, kullanıcıların siteyi kullanmasına, farklı resim veya fotoğrafın sisteme yüklemesine kısıtlama veya sınırlama getirme inisiyatifine tek taraflı sahiptir. Sitede dilediği kişilerin analizlerini kısıtlamak, dilediği resimlerin analizini kabul etmemek veya kullanıcıya dilediği zaman kısıtlama uygulamak ya da kullanıcılara dilediği site olanaklarından faydalanmasını kısıtlama hakkını mahfuz tutmaktadır. Başkasına ait resim/ler sunulan sistemde test edilmemelidir. Oluşacak ihlallerden kullanıcı sorumludur. </string>
+                                        <string key="content" base64-UTF8="YES">
+IAoKA
+</string>
                                         <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="12"/>
                                             <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <real key="NSStrokeWidth" value="0.0"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="  ">
+                                    <fragment content="www.faceanalytic.com">
                                         <attributes>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="systemBold" size="12"/>
                                             <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <real key="NSStrokeWidth" value="0.0"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment>
-                                        <string key="content">7. “faceanalytic.com”; kullanıcılara ait bilgileri güncel teknolojiler kullanarak, mümkün olduğunca güvenli biçimde saklanmaktadır. </string>
+                                    <fragment content=" appreciates your ideas, opinions and feedbacks. You can share these with us by sending e-mails to ">
                                         <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="12"/>
                                             <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="  ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">8. “faceanalytic.com” hizmetini kullanmak üzere sisteme girilen bilgilerin doğruluğu göz önünde bulundurulur. Yanlış beyanlardan dolayı oluşabilecek hatalardan “faceanalytic.com” sorumlu değildir. </string>
-                                        <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="  ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">9. Siteye ziyaretçiler veya kullanıcılar tarafından gönderilen yorumlar ve her türlü içeriğin yayını konusunda inisiyatif “faceanalytic.com” yönetimine aittir. Yönetim, yayımlanan yazıların, raporların, istatistiklerin veya dokümanların gerek görüldüğünde içeriğini, görünümünü, site içindeki yerini değiştirebilir veya yayından kaldırılabilir. </string>
-                                        <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="  ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">10. “faceanalytic.com” sitesinden yararlanan herkes, hukuka davranmak, etik ilkelere saygı duymak ve site kurallarına uymakla yükümlüdür. Hukuki sonuç doğuracak çalışmalar, uygulamalar veya işler için bu sistem kullanılamaz. Kullanıcı bu durumdan doğrudan sorumlu tutulur. </string>
-                                        <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="  ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">11. “faceanalytic.com” sitesinin faaliyet ve hizmetleri, şu an için ar-ge amaçlı olarak hizmet vermekte olup ticari bir gaye taşımamaktadır. Çalışma ticari bir amaç için kullanılamaz. “faceanalytic.com”; tüm bu faaliyetleri ve yararlanma koşullarını değiştirme ya da durdurma hakkını saklı tutar.  </string>
-                                        <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="  ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">12. “faceanalytic.com”; kuralların güncellenmesi ve yenilerinin eklenmesi hakkı ve sorumluluğuna sahiptir. Kurallarda değişiklik olması durumunda kullanıcılar web sayfası aracılığı ile bilgilendirilir. </string>
-                                        <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="  ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">13. Bu web sayfasında sunulan yazılım aracılığı ile yapılacak testlerden kullanıcılar sorumludur. Kullanıcı sadece bir kez ve kendi resmi için uygulamayı kullanmalıdır. </string>
-                                        <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="  ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="KİŞİSEL VERİ KORUMA VE GİZLİLİK POLİTİKASI">
-                                        <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.23921999999999999" green="0.23921999999999999" blue="0.23921999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica-Bold"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.23921999999999999" green="0.23921999999999999" blue="0.23921999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=" ">
-                                        <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="  ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">Kişisel veriler hepimiz için önemlidir. “faceanalytic.com” olarak buna son derece önem veriyoruz. Bu nedenle sizi bu konuda en iyi şekilde bilgilendirmek için bu politikaları oluşturduk. Bu web sayfasında verilen veya bu sayfaya yönlendirilen tüm sistemlerimiz/projelerimiz/çalışmalarımız için verilerin toplanması, kullanılması, paylaşılması, aktarılması ve kaydedilmesi, ile ilgili hususlar aşağıda maddeler halinde açıklanmıştır. Kişisel Verileri Koruma Politikamızla ilgili herhangi bir sorunuz olduğu takdirde lütfen iletişime geçiniz. </string>
-                                        <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="  ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">Ziyaret ettiğiniz sayfalar, internet erişim adresi, eposta gibi temel konulardan, kullandığınız tarayıcıya kadar her tür bilgiyi, siz kullanıcılarımıza daha iyi hizmet sunmak ve sitemizi daha da geliştirmek amacıyla toplarız. Bu bilgiler, aşağıda maddeler halinde verilmiştir. Sizin bize verdiğiniz bilgiler. Bazı durumlarda sizden belirli verilerinizi (eposta adresi, yaş, yaşadığınız şehir, yüz, yorum), karakter analizi yapmak için isteyebiliriz. Böyle durumlarda, ilgili verileri doğrudan siz bize iletirsiniz. Örneğin, analiz için yüz resminiz, sitedeki herhangi bir içeriğe yorum yaparken vereceğiniz isim, soyisim, e-posta gibi kişisel verileriniz bu bilgi türü kapsamındadır. Bu bilgiler sizden alınmadan önce konu ile ilgili bilgilendirme yapılır, açık rızanız yoksa bu bilgiler alınmaz. Sitemizi kullanımınızdan aldığımız bilgiler. Siteyi kullanımınız ile bağlantılı olarak tanımlama bilgileri ve benzer yöntemleri, sitemizi nasıl kullandığınızı görmek için kullanabiliriz. Örneğin; IP adresi, vb. Cihaz Bilgileri. Sitemize bağlandığınız cihazla ilgili bilgiler. Örneğin donanım modeli, işletim sistemi gibi. Log Kayıtları. Sitemizle olan bağlantınızla ilgili bilgiler. Örneğin arama sorgularınız, kullandığınız tarayıcı türü, tarayıcı dili, siteye giriş zamanlarınız ve sayılarınız ile ne kadar süre sitede vakit geçirdiğiniz gibi. Konum Bilgileri. Sitemize bağlandığınız ülke ve şehirle ilgili bilgiler gibi. Çerezler. Sitemizi ziyaret ettiğinizde bilgi toplamak ve depolamak için çeşitli araçlardan yararlanabiliriz. Bunlar, cihazınıza çerez ya da anonim tanımlayıcı göndermeyi de içerebilir. Fotoğraf/Resimler. Geliştirilen sistemin test edilmesi için, kişilerin resim veya fotoğrafın alınması gereklidir. Dolayısıyla, sistemi kullanmak isteyen her kullanıcıdan bu bilgi zorunlu olarak istenilir. Alınan bu resim veri tabanında belirli bir formatta tutulur. Karakter analizi için kullanılır. Bunun sebebi ise aynı kişiye ait farklı diğer bir fotoğraf kullanıldığında bunun benzerliğinin tespiti ve aynı sonucun aynı kullanıcıya sunulmasını sağlayarak sistemin tutarlılığını artırmak amaçlıdır. Analitik Araçlar. Piwik, Google analytics gibi araçlar kullanılarak bazı istatistiksel bilgiler alınmaktadır. Kullanıcı merkezli olan bu araçlar; mahremiyet duyarlılığı yüksek yazılım araçlarıdır. </string>
-                                        <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="  ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">Kullanıcı ile ilgili olarak toplanılan bilgiler; karakter analizleri yapmak, talepleri yerine getirmek, sitenin işlevselliğini sağlamak ve projenin kalitesini artırmak, kullanıcı deneyiminizi kişiselleştirmek için kullanılmaktadır. Bunun yanında yasal yükümlülüklere uymak içinde bu veriler kullanılır. Bu Politikada belirtilen amaçların ve mutat kullanım dışında toplanan verilerin farklı amaçlar için kullanılmak istenilmesi durumunda kullanıcılardan izin alınarak kişisel veriler kullanılacaktır. Kişisel bilgilerin, üçüncü kişilerle paylaşılmamasına üst düzey önem verilir. paylaşılması ancak yasal nedenlerden dolayı üçüncü taraflarla paylaşılır. Diğer bir ifadeyle, yasal bir zorunluluk veya bir mahkeme kararı olmaksızın bilgiler asla üçüncü kişilerle paylaşılmaz. </string>
-                                        <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="  ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">Toplanılan bilgilerin güvenliği sağlanması için gerekli hassasiyet gösterilir. Ancak internet üzerinden veya mobil aygıtlar aracılığıyla aktarım ve elektronik depolama yöntemlerin yüzde yüz güvenliği garanti edilemediğinden, kişisel bilgilerin korunması konusunda kabul gören yöntemler kullanır, standartlar sağlanır. İşbu Politika, muhtelif zamanlarda gözden geçirilebilir. Bu politikada yapılan değişiklikler, yürürlüğe girme tarihinden belirli bir zaman önce sitede yayımlanır ve gerekli bildirim kullanıcılara yapılır. Değişiklikler etkin olduktan sonra bu portala erişim sağlamaya ya da sunulan hizmetin kullanılmaya devam edilmesi durumunda, revize edilmiş Politikayı, kullanıcı kabul etmiş sayılır. </string>
-                                        <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="  ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="İLETİŞİM">
-                                        <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.23921999999999999" green="0.23921999999999999" blue="0.23921999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica-Bold"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.23921999999999999" green="0.23921999999999999" blue="0.23921999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=" ">
-                                        <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="  ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Fikirlerinizi, görüşlerinizi, değerlendirmelerinizi bizimle paylaşın. Bu projenin gelişmesine katkı sağlayınız. ">
-                                        <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="  ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">Yeniliklere ve değişimlere her zaman açığız. Bu bağlamda fikir ve düşüncelerinizi, olumlu ve olumsuz bize ulaştırmanızdan oldukça memnuniyet duyarız. Bu görüşler hizmet ve sunum kalitemizi ve kapasitemizi artırmak için kullanılacaktır. Bize e-posta gönderebilirsiniz. Destek Olunuz. Başarımızı arttıralım ve paylaşalım. </string>
-                                        <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="  ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.21176" green="0.21176" blue="0.21176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <real key="NSStrokeWidth" value="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="face2personality@gmail.com">
                                         <attributes>
-                                            <color key="NSBackgroundColor" red="0.98038999999999998" green="0.98038999999999998" blue="0.98038999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="NSColor" red="0.23921999999999999" green="0.23921999999999999" blue="0.23921999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="Helvetica-Bold"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="systemBold" size="12"/>
                                             <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.23921999999999999" green="0.23921999999999999" blue="0.23921999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <real key="NSStrokeWidth" value="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -776,36 +282,29 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3xB-vt-W3Y"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Terms &amp; Conditions" image="baseline_description_black_24pt" id="CKF-sC-3oK"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="termsText" destination="mPq-8Y-kwQ" id="Kqc-OP-bLu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vp1-so-VTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="887" y="85"/>
+            <point key="canvasLocation" x="874" y="489"/>
         </scene>
-        <!--Hakkında-->
+        <!--About-->
         <scene sceneID="hVa-ht-MDx">
             <objects>
-                <viewController title="Hakkında" id="4jB-24-4Ne" sceneMemberID="viewController">
+                <viewController title="About" id="4jB-24-4Ne" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P3w-PH-w4F">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ynf-CR-Yqd">
-                                <rect key="frame" x="8" y="72" width="359" height="587"/>
-                                <string key="text">Dijital yüz resimlerinden kişilik analizi projesi Gazi Üniversitesi Bilgisayar Mühendisliği Bölüm Başkanı Prof. Şeref Sağıroğlu danışmanlığında geliştirilmektedir. 
+                                <rect key="frame" x="8" y="28" width="359" height="161.5"/>
+                                <mutableString key="text">You can get personality analysis results to your e-mail by uploading your photo. For this, you should upload a face photo which is taken from front side and near distance. The photo should represent your neutral stance and face landmarks should be seen clearly. The image file should have jpg/jpeg extension and its size should not exceed the 4MB. 
 
-Projede fizyonomi konusundaki açık kaynaklardan faydalanılarak hazırlanmış olup halen geliştirme çalışmaları devam etmektedir. 
-
-Proje makine öğrenmesi algoritmalarının yanı sıra geometrik hesaplamalar da kullanarak çalışmaktadır. Proje önerisi 2016 yılında "Microsoft Azure for Research" ödülü kazanmıştır. 
-
-Projenin şu anki versyonu Dlib Python altyapısını kullanmaktadır. 
-Sistemin başarılı sonuç üretebilmesi için ön cepheden çekilmiş, nötral duruşunuzu ifade eden, yüz uzuvlarının net olarak görüldüğü gözlüksüz bir resminizi yüklemeniz gerekmektedir. 
-
-Yapılan kişilik analizlerinden bir ücret alınmamaktadır. Geliştirilen sistemden elde edilen sonuçları başarılı bulup/bulmadığınızı bizimle paylaşarak sistemin kalitesini ve doğruluğunu arttırmamıza katkı sağlayabilirsiniz. 
-
-FaceAnalytic Ekibi</string>
+FaceAnalytic Team</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -815,18 +314,22 @@ FaceAnalytic Ekibi</string>
                         <constraints>
                             <constraint firstItem="ynf-CR-Yqd" firstAttribute="top" secondItem="V8h-ci-vAi" secondAttribute="top" constant="8" id="QDA-Sb-IvF"/>
                             <constraint firstItem="ynf-CR-Yqd" firstAttribute="leading" secondItem="V8h-ci-vAi" secondAttribute="leading" constant="8" id="VWg-Pt-ErB"/>
-                            <constraint firstItem="V8h-ci-vAi" firstAttribute="bottom" secondItem="ynf-CR-Yqd" secondAttribute="bottom" constant="8" id="eug-6P-m8y"/>
+                            <constraint firstItem="V8h-ci-vAi" firstAttribute="bottom" secondItem="ynf-CR-Yqd" secondAttribute="bottom" priority="250" constant="8" id="eug-6P-m8y"/>
                             <constraint firstItem="V8h-ci-vAi" firstAttribute="trailing" secondItem="ynf-CR-Yqd" secondAttribute="trailing" constant="8" id="frk-s5-pXa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="V8h-ci-vAi"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="About" image="baseline_info_black_24pt" id="pJ2-ei-wnO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHy-5e-Rht" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="953" y="768"/>
+            <point key="canvasLocation" x="1534" y="489"/>
         </scene>
     </scenes>
     <resources>
-        <image name="man" width="1244" height="1280"/>
+        <image name="DummyPic" width="1244" height="1280"/>
+        <image name="baseline_description_black_24pt" width="48" height="48"/>
+        <image name="baseline_info_black_24pt" width="48" height="48"/>
+        <image name="baseline_portrait_black_24pt" width="48" height="48"/>
     </resources>
 </document>

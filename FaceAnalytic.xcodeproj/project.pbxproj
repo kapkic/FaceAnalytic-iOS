@@ -28,6 +28,10 @@
 		89737C2C204B4410000E2364 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89737C2E204B4410000E2364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89CBF5C820F3980100EF0942 /* TermsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsController.swift; sourceTree = "<group>"; };
+		C23A2FF6219E06C600F6FC5B /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
+		C23A2FF7219E06C600F6FC5B /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		C23A2FFB219E0F8900F6FC5B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C23A2FFD219E0F8A00F6FC5B /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D6AECB64139D485B8A9AB4FF /* Pods-FaceAnalytic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAnalytic.release.xcconfig"; path = "Pods/Target Support Files/Pods-FaceAnalytic/Pods-FaceAnalytic.release.xcconfig"; sourceTree = "<group>"; };
 		DC0446D8643FEACA46803A8B /* Pods-FaceAnalytic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAnalytic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FaceAnalytic/Pods-FaceAnalytic.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +87,7 @@
 				89737C2B204B4410000E2364 /* LaunchScreen.storyboard */,
 				89737C2E204B4410000E2364 /* Info.plist */,
 				89CBF5C820F3980100EF0942 /* TermsController.swift */,
+				C23A2FFC219E0F8900F6FC5B /* Localizable.strings */,
 			);
 			path = FaceAnalytic;
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = 89737C16204B4410000E2364;
 			productRefGroup = 89737C20204B4410000E2364 /* Products */;
@@ -238,6 +244,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				89737C27204B4410000E2364 /* Base */,
+				C23A2FF6219E06C600F6FC5B /* tr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -246,9 +253,20 @@
 			isa = PBXVariantGroup;
 			children = (
 				89737C2C204B4410000E2364 /* Base */,
+				C23A2FF7219E06C600F6FC5B /* tr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
+		};
+		C23A2FFC219E0F8900F6FC5B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C23A2FFB219E0F8900F6FC5B /* en */,
+				C23A2FFD219E0F8A00F6FC5B /* tr */,
+			);
+			name = Localizable.strings;
+			path = "/Users/kpkc/Desktop/Projects/FaceAnalytic-iOS/FaceAnalytic";
+			sourceTree = "<absolute>";
 		};
 /* End PBXVariantGroup section */
 
@@ -257,6 +275,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -314,6 +333,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,10 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="2cV-un-6Qc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WhiteBG" translatesAutoresizingMaskIntoConstraints="NO" id="saO-L5-TK6">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FaceAnalytic Mobil, 2018." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQg-5r-6t4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FaceAnalytic Mobile, 2018." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQg-5r-6t4">
                                 <rect key="frame" x="8" y="630" width="359" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -34,14 +35,16 @@
                                     <constraint firstAttribute="width" secondItem="1SK-ND-U5l" secondAttribute="height" multiplier="1:1" id="teD-8M-4cQ"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yükleniyor..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9c-a5-DoP">
-                                <rect key="frame" x="8" y="323" width="359" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9c-a5-DoP">
+                                <rect key="frame" x="8" y="343" width="359" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FaceAnalytic: Yüz Fotoğraflarınızdan Kişilik Analizi Yapan Yapay Zeka Sistemi" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lef-ur-LgC">
-                                <rect key="frame" x="8" y="205" width="359" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lef-ur-LgC">
+                                <rect key="frame" x="8" y="205" width="359" height="61"/>
+                                <string key="text">FaceAnalytic: Personality Analysis by Face Photos
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -56,14 +59,10 @@
                             <constraint firstItem="o9c-a5-DoP" firstAttribute="top" secondItem="lef-ur-LgC" secondAttribute="bottom" constant="77" id="7q1-0C-htj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gQg-5r-6t4" secondAttribute="bottom" constant="16" id="7xx-pe-b1j"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o9c-a5-DoP" secondAttribute="trailing" constant="8" id="82O-tr-hOR"/>
-                            <constraint firstItem="2cV-un-6Qc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Pxa-wC-9kH"/>
-                            <constraint firstItem="2cV-un-6Qc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="W2d-Eb-Ilo"/>
-                            <constraint firstItem="2cV-un-6Qc" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ab6-gi-WTH"/>
                             <constraint firstItem="1SK-ND-U5l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="115" id="bLS-v6-qFi"/>
                             <constraint firstItem="lef-ur-LgC" firstAttribute="top" secondItem="1SK-ND-U5l" secondAttribute="bottom" constant="8" id="f66-r4-1de"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1SK-ND-U5l" secondAttribute="trailing" constant="115" id="l0z-si-fmD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lef-ur-LgC" secondAttribute="trailing" constant="8" id="o7a-MU-6og"/>
-                            <constraint firstItem="2cV-un-6Qc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rpg-aT-BwC"/>
                             <constraint firstItem="1SK-ND-U5l" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="vup-h5-PDd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -71,11 +70,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+            <point key="canvasLocation" x="164" y="336.88155922038982"/>
         </scene>
     </scenes>
     <resources>
-        <image name="bg" width="1080" height="1920"/>
+        <image name="WhiteBG" width="460.79998779296875" height="460.79998779296875"/>
         <image name="man" width="1244" height="1280"/>
     </resources>
 </document>
