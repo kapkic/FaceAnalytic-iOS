@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+ Created by Kpkc on 15.11.2018.
+  
+*/
+"Choose Image Source" = "Resim Kaynağı Seçiniz";
+"Camera" = "Kamera";
+"Gallery" = "Albüm";
+"Cancel" = "İptal";
+"Photo Sent" = "Fotoğraf Gönderildi";
+"Personality analysis results have been sent to your e-mail. Please check your email inbox, please contact us at face2personality@gmail.com if you cannot get any results." = "Fotoğrafınıza dair kişilik sonuçları e-posta adresinize gönderilmiştir. Lütfen e-posta kutunuzu kontrol ediniz, sonuç alamamanız durumunda face2personality@gmail.com adresinden iletişime geçebilirsiniz.";
+"Okay" = "Tamam";
+"Internet Connection Error" = "İnternet Bağlantı Hatası";
+"Unable to connect to the internet. Please make sure your device is connected to a network and try again." = "Bağlantı hatası oluştu. Lütfen cihazınızın internete bağlı olduğunu kontrol ederek tekrar deneyiniz.";
+"Please wait..." = "Fotoğraf yükleniyor, lütfen bekleyiniz..."
+
+"e1" = "Resim dosyası analiz edilemedi. Fotoğrafta yüz hatları net değil veya birden fazla kişi var."
+"e2" = "Resim dosyası analiz edilemedi. Fotoğraf yeterli netlikte değil."
+"e3" = "Resim dosyası analiz edilemedi. Fotoğraf ön cepheden çekilmiş olmalıdır."

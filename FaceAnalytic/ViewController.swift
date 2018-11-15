@@ -9,16 +9,36 @@
 import UIKit
 import Alamofire
 
+struct Connectivity {
+    static let sharedInstance = NetworkReachabilityManager()!
+    static var isConnectedToInternet:Bool {
+        return self.sharedInstance.isReachable
+    }
+}
+
 class ViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     @IBOutlet var txtMail : UITextField!
     @IBOutlet var btnPhoto : UIButton!
     @IBOutlet var btnSend : UIButton!
     
-    
     var photo=false;
     var mail=false;
     typealias Parameters = [String: String]
     @IBOutlet var ImageView: UIImageView!
+
+    let imageSourceTitle = NSLocalizedString("Choose Image Source", comment: "")
+    let cameraText = NSLocalizedString("Camera", comment: "")
+    let galleryText = NSLocalizedString("Gallery", comment: "")
+    let cancelText = NSLocalizedString("Cancel", comment: "")
+    let photoSentTitle = NSLocalizedString("Photo Sent", comment: "")
+    let photoSentText = NSLocalizedString("Personality analysis results have been sent to your e-mail. Please check your email inbox, please contact us at face2personality@gmail.com if you cannot get any results.", comment: "")
+    let okayText = NSLocalizedString("Okay", comment: "")
+    let loadingText = NSLocalizedString("Please wait...", comment: "")
+    let internetErrorTitle = NSLocalizedString("Internet Connection Error", comment: "")
+    let internetErrorText = NSLocalizedString("Unable to connect to the internet. Please make sure your device is connected to a network and try again.", comment: "")
+    
+    let faceErrorTitle = NSLocalizedString("Unable to connect to the internet. Please make sure your device is connected to a network and try again.", comment: "")
+    let faceErrorText = NSLocalizedString("Unable to connect to the internet. Please make sure your device is connected to a network and try again.", comment: "")
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         ImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
@@ -26,17 +46,17 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
     }
     
     @IBAction func showActionSheet(_ sender: Any) {
-        let optionMenu = UIAlertController(title:nil,message:"Resim Kaynağı Seçiniz",preferredStyle: .actionSheet)
+        let optionMenu = UIAlertController(title:nil,message:imageSourceTitle,preferredStyle: .actionSheet)
         
-        let photoAction = UIAlertAction(title:"Kamera",style:.default,handler:{
+        let photoAction = UIAlertAction(title:cameraText,style:.default,handler:{
             action in self.getPhoto()
         })
         
-        let galleryAction = UIAlertAction(title:"Albüm",style:.default,handler:{
+        let galleryAction = UIAlertAction(title:galleryText,style:.default,handler:{
             action in self.getGallery()
         })
        
-        let cancelAction =  UIAlertAction(title:"İptal",style:.cancel,handler:{
+        let cancelAction =  UIAlertAction(title:cancelText,style:.cancel,handler:{
             (action) -> Void in print ("Cancel Pressed")
         })
         
@@ -127,6 +147,20 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
     
     @IBAction func StartAnalysis(_ sender: Any) {
         //TODO let's write the fucking history.
+        
+        
+        if Connectivity.isConnectedToInternet {
+            let alert_load = UIAlertController(title: nil, message: loadingText, preferredStyle: .alert)
+            
+            let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+            loadingIndicator.hidesWhenStopped = true
+            loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+            loadingIndicator.startAnimating();
+            
+            alert_load.view.addSubview(loadingIndicator)
+            present(alert_load, animated: true, completion: nil)
+            print("Connected")
+        
 
         let url = "https://www.faceanalytic.com/yukle" /* your API url */
         
@@ -161,10 +195,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
                         return
                     }
                     else{
-                        let alert = UIAlertController(title: "Fotoğraf Gönderildi", message: "Fotoğrafınıza dair kişilik sonuçları e-posta adresinize gönderilmiştir. Lütfen e-posta kutunuzu kontrol ediniz, sonuç alamamanız durumunda face2personality@gmail.com adresinden iletişime geçebilirsiniz.", preferredStyle: .alert)
+                        alert_load.dismiss(animated: false, completion: nil)
+                        let alert_sent = UIAlertController(title: self.photoSentTitle, message: self.photoSentText, preferredStyle: .alert)
                         
-                        alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: nil))                        
-                        self.present(alert, animated: true)
+                        alert_sent.addAction(UIAlertAction(title: self.okayText, style: .default, handler: nil))
+                        self.present(alert_sent, animated: true)
                     }
                     print ("Completed")
                     //print (String(data:err,encoding: String.Encoding.utf8) as String!)
@@ -175,6 +210,13 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
             }
         }
     }
+        else {
+            print("err connect")
+            let alert_network = UIAlertController(title: internetErrorTitle, message: internetErrorText, preferredStyle: .alert)
+            alert_network.addAction(UIAlertAction(title: okayText, style: .default, handler: nil))
+            self.present(alert_network, animated: true)
+        }
+}
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true);

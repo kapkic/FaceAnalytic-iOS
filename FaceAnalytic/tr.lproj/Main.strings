@@ -1,0 +1,39 @@
+
+/* Class = "UIViewController"; title = "Hakkında"; ObjectID = "4jB-24-4Ne"; */
+"4jB-24-4Ne.title" = "Hakkında";
+
+/* Class = "UIButton"; normalTitle = "Fotoğraf Seç"; ObjectID = "680-pT-SIm"; */
+"680-pT-SIm.normalTitle" = "Fotoğraf Seç";
+
+/* Class = "UIViewController"; title = "Kullanım Şartları"; ObjectID = "7AG-oK-qSa"; */
+"7AG-oK-qSa.title" = "Kullanım Şartları";
+
+/* Class = "UIViewController"; title = "Face Analytic"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "Face Analytic";
+
+/* Class = "UITabBarItem"; title = "Kullanım Şartları"; ObjectID = "CKF-sC-3oK"; */
+"CKF-sC-3oK.title" = "Kullanım Şartları";
+
+/* Class = "UITabBarItem"; title = "Kişilik Analizi"; ObjectID = "M9x-S5-pDt"; */
+"M9x-S5-pDt.title" = "Kişilik Analizi";
+
+/* Class = "UITextField"; placeholder = "E-Posta adresi"; ObjectID = "Wdy-yS-6j8"; */
+"Wdy-yS-6j8.placeholder" = "E-Posta adresi";
+
+/* Class = "UIBarButtonItem"; title = "Geri"; ObjectID = "j51-6G-I6v"; */
+"j51-6G-I6v.title" = "Geri";
+
+/* Class = "UILabel"; text = "Kişilik analizini başlatarak kullanım şartlarını kabul etmiş sayılırsınız."; ObjectID = "lLp-Oj-tI7"; */
+"lLp-Oj-tI7.text" = "Kişilik analizini başlatarak kullanım şartlarını kabul etmiş sayılırsınız.";
+
+/* Class = "UITabBarItem"; title = "Hakkında"; ObjectID = "pJ2-ei-wnO"; */
+"pJ2-ei-wnO.title" = "Hakkında";
+
+/* Class = "UINavigationItem"; title = "FaceAnalytic Mobil"; ObjectID = "q0o-UX-13r"; */
+"q0o-UX-13r.title" = "FaceAnalytic Mobil";
+
+/* Class = "UIButton"; normalTitle = "Kişilik Analizini Başlat"; ObjectID = "vnf-oB-16b"; */
+"vnf-oB-16b.normalTitle" = "Kişilik Analizini Başlat";
+
+/* Class = "UILabel"; text = "Dijital yüz resimlerinden kişilik analizi projesi Gazi Üniversitesi Bilgisayar Mühendisliği Bölüm Başkanı Prof. Şeref Sağıroğlu danışmanlığında geliştirilmektedir. \n\nProjede fizyonomi konusundaki açık kaynaklardan faydalanılarak hazırlanmış olup halen geliştirme çalışmaları devam etmektedir. \n\nProje makine öğrenmesi algoritmalarının yanı sıra geometrik hesaplamalar da kullanarak çalışmaktadır. Proje önerisi 2016 yılında \"Microsoft Azure for Research\" ödülü kazanmıştır. \n\nProjenin şu anki versyonu Dlib Python altyapısını kullanmaktadır. \nSistemin başarılı sonuç üretebilmesi için ön cepheden çekilmiş, nötral duruşunuzu ifade eden, yüz uzuvlarının net olarak görüldüğü gözlüksüz bir resminizi yüklemeniz gerekmektedir. \n\nYapılan kişilik analizlerinden bir ücret alınmamaktadır. Geliştirilen sistemden elde edilen sonuçları başarılı bulup/bulmadığınızı bizimle paylaşarak sistemin kalitesini ve doğruluğunu arttırmamıza katkı sağlayabilirsiniz. \n\nFaceAnalytic Ekibi"; ObjectID = "ynf-CR-Yqd"; */
+"ynf-CR-Yqd.text" = "Dijital yüz resimlerinden kişilik analizi projesi Gazi Üniversitesi Bilgisayar Mühendisliği Bölüm Başkanı Prof. Şeref Sağıroğlu danışmanlığında geliştirilmektedir. \n\nProjede fizyonomi konusundaki açık kaynaklardan faydalanılarak hazırlanmış olup halen geliştirme çalışmaları devam etmektedir. \n\nProje makine öğrenmesi algoritmalarının yanı sıra geometrik hesaplamalar da kullanarak çalışmaktadır. Proje önerisi 2016 yılında \"Microsoft Azure for Research\" ödülü kazanmıştır. \n\nProjenin şu anki versyonu Dlib Python altyapısını kullanmaktadır. \nSistemin başarılı sonuç üretebilmesi için ön cepheden çekilmiş, nötral duruşunuzu ifade eden, yüz uzuvlarının net olarak görüldüğü gözlüksüz bir resminizi yüklemeniz gerekmektedir. \n\nYapılan kişilik analizlerinden bir ücret alınmamaktadır. Geliştirilen sistemden elde edilen sonuçları başarılı bulup/bulmadığınızı bizimle paylaşarak sistemin kalitesini ve doğruluğunu arttırmamıza katkı sağlayabilirsiniz. \n\nFaceAnalytic Ekibi";

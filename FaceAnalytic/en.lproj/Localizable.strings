@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  Created by Kpkc on 15.11.2018.
+  
+*/
+"Choose Image Source" = "Choose Image Source";
+"Camera" = "Camera";
+"Gallery" = "Gallery";
+"Cancel" = "Cancel";
+"Photo Sent" = "Photo Sent";
+"Personality analysis results have been sent to your e-mail. Please check your email inbox, please contact us at face2personality@gmail.com if you cannot get any results." = "Personality analysis results have been sent to your e-mail. Please check your email inbox, please contact us at face2personality@gmail.com if you cannot get any results.";
+"Okay" = "Okay";
+"Internet Connection Error" = "Internet Connection Error";
+"Unable to connect to the internet. Please make sure your device is connected to a network and try again." = "Unable to connect to the internet. Please make sure your device is connected to a network and try again.";
+"Please wait..." = "Please wait..."
+
+"e1." = "e1"
+"e2" = "e2"
+"e3 " = "e3"
