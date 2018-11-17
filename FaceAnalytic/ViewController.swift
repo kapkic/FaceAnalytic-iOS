@@ -37,8 +37,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
     let internetErrorTitle = NSLocalizedString("Internet Connection Error", comment: "")
     let internetErrorText = NSLocalizedString("Unable to connect to the internet. Please make sure your device is connected to a network and try again.", comment: "")
     
-    let faceErrorTitle = NSLocalizedString("Unable to connect to the internet. Please make sure your device is connected to a network and try again.", comment: "")
-    let faceErrorText = NSLocalizedString("Unable to connect to the internet. Please make sure your device is connected to a network and try again.", comment: "")
+    //TODO: implement
+    let faceErrorTitle = NSLocalizedString("An Error Occurred While Analyzing.", comment: "")
+    let faceErrorText = NSLocalizedString("Please fix the following issues and try again:\nThere are not enough facial features or there are multiple people in the photo.\nPhoto is not clear enough.\nPhoto should be taken from the front side.", comment: "")
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         ImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
@@ -187,6 +188,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
             case .success(let upload, _, _):
                 upload.responseString { response in
                     print("Succesfully uploaded")
+
                     if let err = response.error{
                         print ("Error1 is:")
                         print (err)
@@ -194,12 +196,22 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
                         print (response)
                         return
                     }
+                    
+                    else if response.result.value?.range(of: "Lütfen aşağıdaki hataları düzelterek") != nil
+                {
+                    alert_load.dismiss(animated: false, completion: nil)
+                    let alert_faceError = UIAlertController(title: self.faceErrorTitle, message: self.faceErrorText, preferredStyle: .alert)
+                    alert_faceError.addAction(UIAlertAction(title: self.okayText, style: .default, handler: nil))
+                    self.present(alert_faceError, animated: true)
+                    print ("faceError")
+                    return
+                }
                     else{
                         alert_load.dismiss(animated: false, completion: nil)
                         let alert_sent = UIAlertController(title: self.photoSentTitle, message: self.photoSentText, preferredStyle: .alert)
-                        
                         alert_sent.addAction(UIAlertAction(title: self.okayText, style: .default, handler: nil))
                         self.present(alert_sent, animated: true)
+                        print ("Succ")
                     }
                     print ("Completed")
                     //print (String(data:err,encoding: String.Encoding.utf8) as String!)

@@ -12,8 +12,11 @@
 "Okay" = "Okay";
 "Internet Connection Error" = "Internet Connection Error";
 "Unable to connect to the internet. Please make sure your device is connected to a network and try again." = "Unable to connect to the internet. Please make sure your device is connected to a network and try again.";
-"Please wait..." = "Please wait..."
+"Please wait..." = "Please wait...";
 
-"e1." = "e1"
-"e2" = "e2"
-"e3 " = "e3"
+"An Error Occurred While Analyzing" = "An Error Occurred While Analyzing";
+"There are not enough facial features or there are multiple people in the photo." = "There are not enough facial features or there are multiple people in the photo.";
+"Photo is not clear enough." = "Photo is not clear enough.";
+"Photo should be taken from the front side." = "Photo should be taken from the front side.";
+
+"Please fix the following issues and try again:\nThere are not enough facial features or there are multiple people in the photo.\nPhoto is not clear enough.\nPhoto should be taken from the front side." = "Please fix the following issues and try again:\nThere are not enough facial features or there are multiple people in the photo.\nPhoto is not clear enough.\nPhoto should be taken from the front side.";

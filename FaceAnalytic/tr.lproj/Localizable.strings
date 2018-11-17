@@ -12,8 +12,11 @@
 "Okay" = "Tamam";
 "Internet Connection Error" = "İnternet Bağlantı Hatası";
 "Unable to connect to the internet. Please make sure your device is connected to a network and try again." = "Bağlantı hatası oluştu. Lütfen cihazınızın internete bağlı olduğunu kontrol ederek tekrar deneyiniz.";
-"Please wait..." = "Fotoğraf yükleniyor, lütfen bekleyiniz..."
+"Please wait..." = "Fotoğraf yükleniyor, lütfen bekleyiniz...";
 
-"e1" = "Resim dosyası analiz edilemedi. Fotoğrafta yüz hatları net değil veya birden fazla kişi var."
-"e2" = "Resim dosyası analiz edilemedi. Fotoğraf yeterli netlikte değil."
-"e3" = "Resim dosyası analiz edilemedi. Fotoğraf ön cepheden çekilmiş olmalıdır."
+"An Error Occurred While Analyzing" = "Görüntü Analiz Edilirken Bir Hata Oluştu";
+"There are not enough facial features or there are multiple people in the photo." = "Fotoğrafta yüz hatları net değil veya birden fazla kişi var.";
+"Photo is not clear enough." = "Fotoğraf yeterli netlikte değil.";
+"Photo should be taken from the front side." = "Fotoğraf ön cepheden çekilmiş olmalıdır.";
+
+"Please fix the following issues and try again:\nThere are not enough facial features or there are multiple people in the photo.\nPhoto is not clear enough.\nPhoto should be taken from the front side."="Lütfen şu hataları düzelterek tekrar deneyiniz:\nFotoğrafta yüz hatları net değil veya birden fazla kişi var.\nFotoğraf yeterli netlikte değil.\nFotoğraf ön cepheden çekilmiş olmalıdır.";
