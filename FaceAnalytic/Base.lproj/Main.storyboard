@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LYe-Lh-I1I">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController title="Face Analytic" id="BYZ-38-t0r" customClass="ViewController" customModule="FaceAnalytic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wdy-yS-6j8">
-                                <rect key="frame" x="8" y="334" width="359" height="30"/>
+                                <rect key="frame" x="8" y="373" width="398" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="email"/>
@@ -28,13 +28,13 @@
                                 </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="200" image="DummyPic" translatesAutoresizingMaskIntoConstraints="NO" id="rWe-6h-PAt">
-                                <rect key="frame" x="87" y="72" width="200" height="200"/>
+                                <rect key="frame" x="87" y="72" width="239" height="239"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rWe-6h-PAt" secondAttribute="height" multiplier="1:1" id="6LZ-R6-SYb"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnf-oB-16b">
-                                <rect key="frame" x="8" y="539" width="364" height="32"/>
+                                <rect key="frame" x="53" y="608" width="308" height="32"/>
                                 <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -46,14 +46,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="680-pT-SIm">
-                                <rect key="frame" x="8" y="288" width="359" height="30"/>
+                                <rect key="frame" x="8" y="327" width="398" height="30"/>
                                 <state key="normal" title="Pick Image"/>
                                 <connections>
                                     <action selector="showActionSheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vBp-bq-gic"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By starting a personality analysis you acknowledge reading and having accepted the terms &amp; conditions." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" preferredMaxLayoutWidth="294.5" translatesAutoresizingMaskIntoConstraints="NO" id="lLp-Oj-tI7">
-                                <rect key="frame" x="8" y="587" width="359" height="23"/>
+                                <rect key="frame" x="8" y="656" width="398" height="23"/>
                                 <viewLayoutGuide key="safeArea" id="uep-Yd-fNV"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -62,14 +62,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="vnf-oB-16b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="265-UZ-zSi"/>
+                            <constraint firstItem="vnf-oB-16b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="265-UZ-zSi"/>
                             <constraint firstItem="rWe-6h-PAt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="47t-Mn-WmY"/>
                             <constraint firstItem="Wdy-yS-6j8" firstAttribute="top" secondItem="680-pT-SIm" secondAttribute="bottom" constant="16" id="7X3-7O-ab7"/>
                             <constraint firstItem="680-pT-SIm" firstAttribute="top" secondItem="rWe-6h-PAt" secondAttribute="bottom" constant="16" id="Hfr-hZ-lJB"/>
                             <constraint firstItem="rWe-6h-PAt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="KGo-UA-STt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lLp-Oj-tI7" secondAttribute="trailing" constant="8" id="KoC-V9-8wU"/>
                             <constraint firstItem="lLp-Oj-tI7" firstAttribute="top" secondItem="vnf-oB-16b" secondAttribute="bottom" constant="16" id="N2w-Bu-Bhb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vnf-oB-16b" secondAttribute="trailing" constant="3" id="Npw-jm-syM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vnf-oB-16b" secondAttribute="trailing" constant="53" id="Npw-jm-syM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lLp-Oj-tI7" secondAttribute="bottom" constant="8" id="Oec-3l-NYC"/>
                             <constraint firstItem="680-pT-SIm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="VW9-9l-6yl"/>
                             <constraint firstItem="Wdy-yS-6j8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="b32-ot-g7h"/>
@@ -94,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="157.59999999999999" y="488.90554722638683"/>
+            <point key="canvasLocation" x="157.5" y="488.02816901408454"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Hvh-tF-xXy">
@@ -120,11 +120,11 @@
             <objects>
                 <viewController title="Terms &amp; Conditions" id="7AG-oK-qSa" customClass="TermsController" customModule="FaceAnalytic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rKe-nC-w9v">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mPq-8Y-kwQ" userLabel="TermsText">
-                                <rect key="frame" x="8" y="72" width="359" height="530"/>
+                                <rect key="frame" x="8" y="72" width="398" height="599"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
                                     <fragment content="TERMS OF USE AND PRIVACY POLICY ">
@@ -302,11 +302,11 @@ IAoKA
             <objects>
                 <viewController title="About" id="4jB-24-4Ne" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P3w-PH-w4F">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ynf-CR-Yqd">
-                                <rect key="frame" x="8" y="28" width="359" height="161.5"/>
+                                <rect key="frame" x="8" y="28" width="398" height="161.33333333333334"/>
                                 <string key="text">You can get personality analysis results to your e-mail by uploading your photo. For this, you should upload a face photo which is taken from front side and near distance. The photo should represent your neutral stance and face landmarks should be seen clearly. The image file should have jpg/jpeg extension and its size should not exceed the 4MB. 
 
 FaceAnalytic Team</string>
@@ -333,8 +333,8 @@ FaceAnalytic Team</string>
     </scenes>
     <resources>
         <image name="DummyPic" width="1244" height="1280"/>
-        <image name="baseline_description_black_24pt" width="48" height="48"/>
-        <image name="baseline_info_black_24pt" width="48" height="48"/>
-        <image name="baseline_portrait_black_24pt" width="48" height="48"/>
+        <image name="baseline_description_black_24pt" width="72" height="72"/>
+        <image name="baseline_info_black_24pt" width="72" height="72"/>
+        <image name="baseline_portrait_black_24pt" width="72" height="72"/>
     </resources>
 </document>

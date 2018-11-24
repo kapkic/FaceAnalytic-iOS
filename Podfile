@@ -6,6 +6,4 @@ use_frameworks!
 
 target 'FaceAnalytic' do
     pod 'Alamofire', '~> 4.7'
-    pod 'MaterialComponents/Buttons'
-    pod 'MaterialComponents/Buttons+Extensions/ButtonThemer'
 end
