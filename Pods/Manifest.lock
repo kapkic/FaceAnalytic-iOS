@@ -1,12 +1,59 @@
 PODS:
-  - Alamofire (4.7.0)
+  - Alamofire (4.7.3)
+  - MaterialComponents/Buttons (54.13.0):
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Math
+    - MaterialComponents/private/Shapes
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Typography
+    - MDFInternationalization
+    - MDFTextAccessibility
+  - "MaterialComponents/Buttons+Extensions/ButtonThemer (54.13.0)":
+    - MaterialComponents/Buttons
+    - "MaterialComponents/Buttons+Extensions/ColorThemer"
+    - "MaterialComponents/Buttons+Extensions/TypographyThemer"
+  - "MaterialComponents/Buttons+Extensions/ColorThemer (54.13.0)":
+    - MaterialComponents/Buttons
+    - MaterialComponents/schemes/Color
+  - "MaterialComponents/Buttons+Extensions/TypographyThemer (54.13.0)":
+    - MaterialComponents/Buttons
+    - MaterialComponents/schemes/Typography
+  - MaterialComponents/Ink (54.13.0):
+    - MaterialComponents/private/Math
+  - MaterialComponents/private/Application (54.13.0)
+  - MaterialComponents/private/Math (54.13.0)
+  - MaterialComponents/private/Shapes (54.13.0):
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
+  - MaterialComponents/schemes/Color (54.13.0)
+  - MaterialComponents/schemes/Typography (54.13.0)
+  - MaterialComponents/ShadowElevations (54.13.0)
+  - MaterialComponents/ShadowLayer (54.13.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/Typography (54.13.0):
+    - MaterialComponents/private/Application
+  - MDFInternationalization (1.1.0)
+  - MDFTextAccessibility (1.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - MaterialComponents/Buttons
+  - "MaterialComponents/Buttons+Extensions/ButtonThemer"
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - MaterialComponents
+    - MDFInternationalization
+    - MDFTextAccessibility
 
 SPEC CHECKSUMS:
-  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  MaterialComponents: 3399c262334c35e4994a7b25ad1e9a3ce48dce07
+  MDFInternationalization: b5b8626628abf026e630e5ebaeee563037712cbb
+  MDFTextAccessibility: 94098925e0853551c5a311ce7c1ecefbe297cdb6
 
-PODFILE CHECKSUM: 8729d75d9d758ac479d62a3990c75da3e6d98fe9
+PODFILE CHECKSUM: ebf9698f784af1c4170625e19cf31b216d33541f
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

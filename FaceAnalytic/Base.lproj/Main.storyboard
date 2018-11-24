@@ -34,8 +34,13 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnf-oB-16b">
-                                <rect key="frame" x="8" y="541" width="359" height="30"/>
-                                <state key="normal" title="Start Personality Analysis"/>
+                                <rect key="frame" x="8" y="539" width="364" height="32"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Start Personality Analysis">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="StartAnalysis:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T35-oA-vEz"/>
                                 </connections>
@@ -64,7 +69,7 @@
                             <constraint firstItem="rWe-6h-PAt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="KGo-UA-STt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lLp-Oj-tI7" secondAttribute="trailing" constant="8" id="KoC-V9-8wU"/>
                             <constraint firstItem="lLp-Oj-tI7" firstAttribute="top" secondItem="vnf-oB-16b" secondAttribute="bottom" constant="16" id="N2w-Bu-Bhb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vnf-oB-16b" secondAttribute="trailing" constant="8" id="Npw-jm-syM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vnf-oB-16b" secondAttribute="trailing" constant="3" id="Npw-jm-syM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lLp-Oj-tI7" secondAttribute="bottom" constant="8" id="Oec-3l-NYC"/>
                             <constraint firstItem="680-pT-SIm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="VW9-9l-6yl"/>
                             <constraint firstItem="Wdy-yS-6j8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="b32-ot-g7h"/>
@@ -89,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="159" y="489"/>
+            <point key="canvasLocation" x="157.59999999999999" y="488.90554722638683"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Hvh-tF-xXy">
@@ -135,7 +140,7 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content"> 
+                                        <string key="content"> 
 
 1. “faceanalytic.com” is an online website service that it makes personality analysis by face images of the persons. All information, outputs and documents in scope of this website have been generated to serve to users who are curious about personality analysis, to help for those persons, to make academic works and to contribute the works which will contribute to development of this field in our country. 
 
@@ -194,10 +199,10 @@ are obtanied by explicit consent of the user.
 
 24. All visitors Who use or benefit from the services of "faceanalytic.com" vow that they have read and accepted the issues under this "TERMS OF USE" and hold the all responsibility. 
 
-</mutableString>
+</string>
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" metaFont="system" size="12"/>
+                                            <font key="NSFont" metaFont="cellTitle"/>
                                             <real key="NSKern" value="0.0"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
@@ -224,7 +229,7 @@ IAoKA
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" metaFont="system" size="12"/>
+                                            <font key="NSFont" metaFont="cellTitle"/>
                                             <real key="NSKern" value="0.0"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
@@ -248,7 +253,7 @@ IAoKA
                                     <fragment content=" appreciates your ideas, opinions and feedbacks. You can share these with us by sending e-mails to ">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" metaFont="system" size="12"/>
+                                            <font key="NSFont" metaFont="cellTitle"/>
                                             <real key="NSKern" value="0.0"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
@@ -302,9 +307,9 @@ IAoKA
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ynf-CR-Yqd">
                                 <rect key="frame" x="8" y="28" width="359" height="161.5"/>
-                                <mutableString key="text">You can get personality analysis results to your e-mail by uploading your photo. For this, you should upload a face photo which is taken from front side and near distance. The photo should represent your neutral stance and face landmarks should be seen clearly. The image file should have jpg/jpeg extension and its size should not exceed the 4MB. 
+                                <string key="text">You can get personality analysis results to your e-mail by uploading your photo. For this, you should upload a face photo which is taken from front side and near distance. The photo should represent your neutral stance and face landmarks should be seen clearly. The image file should have jpg/jpeg extension and its size should not exceed the 4MB. 
 
-FaceAnalytic Team</mutableString>
+FaceAnalytic Team</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

@@ -18,9 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WhiteBG" translatesAutoresizingMaskIntoConstraints="NO" id="saO-L5-TK6">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBG" translatesAutoresizingMaskIntoConstraints="NO" id="saO-L5-TK6">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FaceAnalytic Mobile, 2018." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQg-5r-6t4">
@@ -59,11 +58,15 @@
                             <constraint firstItem="o9c-a5-DoP" firstAttribute="top" secondItem="lef-ur-LgC" secondAttribute="bottom" constant="77" id="7q1-0C-htj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gQg-5r-6t4" secondAttribute="bottom" constant="16" id="7xx-pe-b1j"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o9c-a5-DoP" secondAttribute="trailing" constant="8" id="82O-tr-hOR"/>
+                            <constraint firstItem="saO-L5-TK6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GPW-6a-NoU"/>
                             <constraint firstItem="1SK-ND-U5l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="115" id="bLS-v6-qFi"/>
+                            <constraint firstItem="saO-L5-TK6" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="dLy-7R-M2F"/>
                             <constraint firstItem="lef-ur-LgC" firstAttribute="top" secondItem="1SK-ND-U5l" secondAttribute="bottom" constant="8" id="f66-r4-1de"/>
+                            <constraint firstItem="saO-L5-TK6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hVb-ei-xp3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1SK-ND-U5l" secondAttribute="trailing" constant="115" id="l0z-si-fmD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lef-ur-LgC" secondAttribute="trailing" constant="8" id="o7a-MU-6og"/>
                             <constraint firstItem="1SK-ND-U5l" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="vup-h5-PDd"/>
+                            <constraint firstItem="saO-L5-TK6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="xL5-H4-0k4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

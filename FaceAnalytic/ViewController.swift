@@ -8,6 +8,8 @@
 
 import UIKit
 import Alamofire
+import MaterialComponents.MaterialButtons
+import MaterialComponents.MaterialButtons_ButtonThemer
 
 struct Connectivity {
     static let sharedInstance = NetworkReachabilityManager()!
@@ -40,6 +42,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
     //TODO: implement
     let faceErrorTitle = NSLocalizedString("An Error Occurred While Analyzing.", comment: "")
     let faceErrorText = NSLocalizedString("Please fix the following issues and try again:\nThere are not enough facial features or there are multiple people in the photo.\nPhoto is not clear enough.\nPhoto should be taken from the front side.", comment: "")
+    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         ImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
@@ -78,8 +81,10 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
         print ("photo selected camera")
         if (mail && photo)
         {
+            btnSend.layer.borderColor = UIColor.blue.cgColor
             btnSend.isEnabled=true;
         }else{
+            btnSend.layer.borderColor = UIColor.gray.cgColor
             btnSend.isEnabled=false;
         }
     }
@@ -233,8 +238,19 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true);
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        let button = MDCButton()
+//        let buttonScheme = MDCButtonScheme()
+//        MDCOutlinedButtonThemer.applyScheme(buttonScheme, to: button)
+
+        //ManualOverride
+//        btnSend.backgroundColor = .clear
+//        btnSend.layer.cornerRadius = 5
+//        btnSend.layer.borderWidth = 1
+//        btnSend.layer.borderColor = UIColor.gray.cgColor
         btnSend.isEnabled=false;
         txtMail.returnKeyType = UIReturnKeyType.done
         txtMail.delegate = self

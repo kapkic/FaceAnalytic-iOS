@@ -112,7 +112,6 @@
 				89737C1C204B4410000E2364 /* Frameworks */,
 				89737C1D204B4410000E2364 /* Resources */,
 				57D6258F33DB252F8ADCA8F2 /* [CP] Embed Pods Frameworks */,
-				5D1A5FB150D59B8A5153FC77 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -180,29 +179,20 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FaceAnalytic/Pods-FaceAnalytic-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FaceAnalytic/Pods-FaceAnalytic-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5D1A5FB150D59B8A5153FC77 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FaceAnalytic/Pods-FaceAnalytic-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8298AF48F68F7DE4CB2E3297 /* [CP] Check Pods Manifest.lock */ = {
