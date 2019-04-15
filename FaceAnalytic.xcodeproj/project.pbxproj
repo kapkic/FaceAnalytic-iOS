@@ -80,13 +80,13 @@
 			children = (
 				89737C20204B4410000E2364 /* Products */,
 				89737C22204B4410000E2364 /* AppDelegate.swift */,
-				89737C24204B4410000E2364 /* ViewController.swift */,
 				89198A52204C9D93003389A5 /* Media.swift */,
+				89CBF5C820F3980100EF0942 /* TermsController.swift */,
+				89737C24204B4410000E2364 /* ViewController.swift */,
 				89737C26204B4410000E2364 /* Main.storyboard */,
 				89737C29204B4410000E2364 /* Assets.xcassets */,
 				89737C2B204B4410000E2364 /* LaunchScreen.storyboard */,
 				89737C2E204B4410000E2364 /* Info.plist */,
-				89CBF5C820F3980100EF0942 /* TermsController.swift */,
 				C23A2FFC219E0F8900F6FC5B /* Localizable.strings */,
 			);
 			path = FaceAnalytic;

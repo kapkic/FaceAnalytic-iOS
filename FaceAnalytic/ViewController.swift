@@ -37,6 +37,10 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
     let loadingText = NSLocalizedString("Please wait...", comment: "")
     let internetErrorTitle = NSLocalizedString("Internet Connection Error", comment: "")
     let internetErrorText = NSLocalizedString("Unable to connect to the internet. Please make sure your device is connected to a network and try again.", comment: "")
+    
+    let timeoutErrorTitle = NSLocalizedString("An Error Occurred While Connecting to the Server.", comment: "")
+    let timeoutErrorText = NSLocalizedString("Timeout occurred while sending data to the server. Please try again later.", comment: "")
+    
     let faceErrorTitle = NSLocalizedString("An Error Occurred While Analyzing.", comment: "")
     let faceErrorText = NSLocalizedString("Please fix the following issues and try again:\nThere are not enough facial features or there are multiple people in the photo.\nPhoto is not clear enough.\nPhoto should be taken from the front side.", comment: "")
     //Text Operations
