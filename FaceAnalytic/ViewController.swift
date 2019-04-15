@@ -39,7 +39,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
     let internetErrorText = NSLocalizedString("Unable to connect to the internet. Please make sure your device is connected to a network and try again.", comment: "")
     
     let timeoutErrorTitle = NSLocalizedString("An Error Occurred While Connecting to the Server.", comment: "")
-    let timeoutErrorText = NSLocalizedString("Timeout occurred while sending data to the server. Please try again later.", comment: "")
+    let timeoutErrorText = NSLocalizedString("Server timed out while sending data. Please try again later.", comment: "")
     
     let faceErrorTitle = NSLocalizedString("An Error Occurred While Analyzing.", comment: "")
     let faceErrorText = NSLocalizedString("Please fix the following issues and try again:\nThere are not enough facial features or there are multiple people in the photo.\nPhoto is not clear enough.\nPhoto should be taken from the front side.", comment: "")
@@ -183,7 +183,18 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
                         print (err)
                         print ("Response is:")
                         print (response)
-                        return
+                       
+                       print (response.description)
+                        if response.description.contains("timed out")
+                        {
+                            alert_load.dismiss(animated: false, completion: nil)
+                            let alert_timeoutError = UIAlertController(title: self.timeoutErrorTitle, message: self.timeoutErrorText, preferredStyle: .alert)
+                            alert_timeoutError.addAction(UIAlertAction(title: self.okayText, style: .default, handler: nil))
+                            self.present(alert_timeoutError, animated: true)
+                            print ("faceError")
+                            return
+                        }
+                         return
                     }
                     
                     else if response.result.value?.range(of: "Lütfen aşağıdaki hataları düzelterek") != nil
@@ -195,6 +206,16 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
                     print ("faceError")
                     return
                 }
+                    else if response.result.value?.range(of: "timed out") != nil
+                    {
+                        alert_load.dismiss(animated: false, completion: nil)
+                        let alert_timeoutError = UIAlertController(title: self.timeoutErrorTitle, message: self.timeoutErrorText, preferredStyle: .alert)
+                        alert_timeoutError.addAction(UIAlertAction(title: self.okayText, style: .default, handler: nil))
+                        self.present(alert_timeoutError, animated: true)
+                        print ("faceError")
+                        return
+                    }
+                        
                     else{
                         alert_load.dismiss(animated: false, completion: nil)
                         let alert_sent = UIAlertController(title: self.photoSentTitle, message: self.photoSentText, preferredStyle: .alert)

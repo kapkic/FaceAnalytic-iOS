@@ -20,3 +20,5 @@
 "Photo should be taken from the front side." = "Fotoğraf ön cepheden çekilmiş olmalıdır.";
 
 "Please fix the following issues and try again:\nThere are not enough facial features or there are multiple people in the photo.\nPhoto is not clear enough.\nPhoto should be taken from the front side."="Lütfen şu hataları düzelterek tekrar deneyiniz:\nFotoğrafta yüz hatları net değil veya birden fazla kişi var.\nFotoğraf yeterli netlikte değil.\nFotoğraf ön cepheden çekilmiş olmalıdır.";
+"An Error Occurred While Connecting to the Server." = "Sunucuya Bağlanırken Bir Hata Oluştu.";
+"Server timed out while sending data. Please try again later." = "Veri gönderimi esnasında sunucu zaman aşımına uğradı, lütfen daha sonra tekrar deneyin.";
